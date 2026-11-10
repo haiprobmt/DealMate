@@ -1,0 +1,1275 @@
+{
+ "_about": "DỮ LIỆU MẪU cho chế độ demo/phát triển. Mọi tin đăng, người bán, giá, voucher, đánh giá ở đây là bịa để phát triển phần mềm, KHÔNG phải dữ liệu thật từ sàn. / MOCK development data - not retrieved from any marketplace.",
+ "listings": [
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-001",
+   "title": "[MẪU] Sữa chống nắng Anessa Perfect UV Sunscreen Skincare Milk 60ml SPF50+ PA++++",
+   "seller": {
+    "external_id": "MOCK-DEMO-BEAUTY-MALL",
+    "name": "Demo Beauty Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": "TP. Hồ Chí Minh"
+   },
+   "listed_price": 365000,
+   "original_price": 715000,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 20000,
+     "min_spend": 300000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Giảm 20k đơn từ 300k"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 1250,
+   "sold_count": 5300
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-001",
+   "title": "[MẪU] Anessa Perfect UV Sunscreen Skincare Milk 60ml chính hãng",
+   "seller": {
+    "external_id": "MOCK-DEMO-COSMETICS-OFFICIAL",
+    "name": "Demo Cosmetics Official",
+    "rating": 4.8,
+    "is_official_store": true,
+    "location": "Hà Nội"
+   },
+   "listed_price": 359000,
+   "original_price": 715000,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 30000,
+     "min_spend": 350000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Voucher shop 30k đơn từ 350k"
+    },
+    {
+     "source": "platform",
+     "kind": "percent",
+     "value": 8,
+     "min_spend": 300000,
+     "verified": true,
+     "max_discount": 25000,
+     "requires": null,
+     "description": "Lazada giảm 8% tối đa 25k"
+    }
+   ],
+   "shipping_fee": 15000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 640,
+   "sold_count": 2100
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-001",
+   "title": "[MẪU] Kem chống nắng Anessa Perfect UV Skincare Milk 60ml",
+   "seller": {
+    "external_id": "MOCK-DEMO-SKIN-HOUSE",
+    "name": "Demo Skin House",
+    "rating": 4.6,
+    "is_official_store": null,
+    "location": "Đà Nẵng"
+   },
+   "listed_price": 329000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": null,
+   "shipping_status": "unknown",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 210,
+   "sold_count": 900
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-002",
+   "title": "[MẪU] Sữa chống nắng Anessa Perfect UV Skincare Milk 60ml nội địa Nhật",
+   "seller": {
+    "external_id": "MOCK-DEMO-HÀNG-NHẬT-XÁCH-TAY",
+    "name": "Demo Hàng Nhật Xách Tay",
+    "rating": 4.7,
+    "is_official_store": null,
+    "location": "Hà Nội"
+   },
+   "listed_price": 339000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 22000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 88,
+   "sold_count": 410
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-002",
+   "title": "[MẪU] Sữa chống nắng Anessa Perfect UV Sunscreen Skincare Milk 60ml",
+   "seller": {
+    "external_id": "MOCK-DEMO-BEAUTY-LIVE",
+    "name": "Demo Beauty Live",
+    "rating": 4.8,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 349000,
+   "original_price": null,
+   "vouchers": [
+    {
+     "source": "platform",
+     "kind": "fixed",
+     "value": 40000,
+     "min_spend": 300000,
+     "verified": false,
+     "max_discount": null,
+     "requires": "khách hàng mới",
+     "description": "Giảm 40k cho khách mới"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "estimated",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 95,
+   "sold_count": 620
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-003",
+   "title": "[MẪU] Gel chống nắng Anessa Perfect UV Sunscreen Skincare Gel 90g",
+   "seller": {
+    "external_id": "MOCK-DEMO-BEAUTY-MALL",
+    "name": "Demo Beauty Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 398000,
+   "original_price": 715000,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 830,
+   "sold_count": 3100
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-002",
+   "title": "[MẪU] Anessa Perfect UV Sunscreen Mild Milk 60ml cho da nhạy cảm",
+   "seller": {
+    "external_id": "MOCK-DEMO-COSMETICS-OFFICIAL",
+    "name": "Demo Cosmetics Official",
+    "rating": 4.8,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 372000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 15000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 300,
+   "sold_count": 1100
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-004",
+   "title": "[MẪU] Combo 2 sữa chống nắng Anessa Perfect UV Skincare Milk 60ml",
+   "seller": {
+    "external_id": "MOCK-DEMO-BEAUTY-MALL",
+    "name": "Demo Beauty Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 699000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 120,
+   "sold_count": 450
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-003",
+   "title": "[MẪU] Sữa chống nắng Anessa Perfect UV Skincare Milk 20ml mini",
+   "seller": {
+    "external_id": "MOCK-DEMO-MINI-SIZE-SHOP",
+    "name": "Demo Mini Size Shop",
+    "rating": 4.5,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 135000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 18000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.6,
+   "rating_count": 60,
+   "sold_count": 300
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-003",
+   "title": "[MẪU] Kem chống nắng Anessa 60ml giá sốc",
+   "seller": {
+    "external_id": "MOCK-DEMO-SALE-SỐC",
+    "name": "Demo Sale Sốc",
+    "rating": 4.1,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 259000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 25000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.2,
+   "rating_count": 35,
+   "sold_count": 150
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-005",
+   "title": "[MẪU] Kem chống nắng Bioré UV Aqua Rich Watery Essence 50g",
+   "seller": {
+    "external_id": "MOCK-DEMO-DRUGSTORE",
+    "name": "Demo Drugstore",
+    "rating": 4.8,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 165000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 16000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 2200,
+   "sold_count": 9000
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-006",
+   "title": "[MẪU] Máy sấy tóc Dyson Supersonic HD15 màu đen chính hãng",
+   "seller": {
+    "external_id": "MOCK-DEMO-HOME-APPLIANCE-MALL",
+    "name": "Demo Home Appliance Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 8990000,
+   "original_price": 11990000,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 500000,
+     "min_spend": 8000000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Giảm 500k đơn từ 8 triệu"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 140,
+   "sold_count": 380
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-004",
+   "title": "[MẪU] Dyson Supersonic HD15 Hair Dryer Black",
+   "seller": {
+    "external_id": "MOCK-DEMO-ELECTRONICS-OFFICIAL",
+    "name": "Demo Electronics Official",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 8690000,
+   "original_price": 11990000,
+   "vouchers": [
+    {
+     "source": "platform",
+     "kind": "percent",
+     "value": 5,
+     "min_spend": 5000000,
+     "verified": true,
+     "max_discount": 300000,
+     "requires": null,
+     "description": "Giảm 5% tối đa 300k"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 75,
+   "sold_count": 210
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-004",
+   "title": "[MẪU] Máy sấy tóc Dyson Supersonic HD15 màu đen",
+   "seller": {
+    "external_id": "MOCK-DEMO-HAIR-STUDIO",
+    "name": "Demo Hair Studio",
+    "rating": 4.5,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 7950000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": null,
+   "shipping_status": "unknown",
+   "mandatory_fees": [],
+   "rating": 4.6,
+   "rating_count": 22,
+   "sold_count": 60
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-007",
+   "title": "[MẪU] Máy sấy tóc Dyson Supersonic HD15 màu hồng",
+   "seller": {
+    "external_id": "MOCK-DEMO-HOME-APPLIANCE-MALL",
+    "name": "Demo Home Appliance Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 9190000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 90,
+   "sold_count": 240
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-005",
+   "title": "[MẪU] Máy sấy tóc Dyson Supersonic HD08 màu đen",
+   "seller": {
+    "external_id": "MOCK-DEMO-GIA-DỤNG-STORE",
+    "name": "Demo Gia Dụng Store",
+    "rating": 4.7,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 7490000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 30000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 310,
+   "sold_count": 800
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-005",
+   "title": "[MẪU] Máy sấy tóc Dyson Supersonic Nural HD16 màu xanh",
+   "seller": {
+    "external_id": "MOCK-DEMO-HAIR-STUDIO",
+    "name": "Demo Hair Studio",
+    "rating": 4.5,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 11490000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 18,
+   "sold_count": 40
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-008",
+   "title": "[MẪU] Giá đỡ máy sấy tóc Dyson Supersonic HD15",
+   "seller": {
+    "external_id": "MOCK-DEMO-PHỤ-KIỆN",
+    "name": "Demo Phụ Kiện",
+    "rating": 4.6,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 189000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 15000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.5,
+   "rating_count": 400,
+   "sold_count": 1500
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-006",
+   "title": "[MẪU] Máy sấy tóc Dyson Supersonic HD15 màu đen xách tay bản Mỹ",
+   "seller": {
+    "external_id": "MOCK-DEMO-GLOBAL-IMPORT",
+    "name": "Demo Global Import",
+    "rating": 4.4,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 7690000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 45000,
+   "shipping_status": "estimated",
+   "mandatory_fees": [],
+   "rating": 4.5,
+   "rating_count": 40,
+   "sold_count": 95
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-009",
+   "title": "[MẪU] Máy sấy tóc Philips BHD308 1600W",
+   "seller": {
+    "external_id": "MOCK-DEMO-GIA-DỤNG-STORE",
+    "name": "Demo Gia Dụng Store",
+    "rating": 4.7,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 329000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 20000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 5100,
+   "sold_count": 20000
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-010",
+   "title": "[MẪU] Tã quần Merries size L 44 miếng",
+   "seller": {
+    "external_id": "MOCK-DEMO-MẸ-&-BÉ-MALL",
+    "name": "Demo Mẹ & Bé Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 349000,
+   "original_price": 420000,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 15000,
+     "min_spend": 300000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Giảm 15k đơn từ 300k"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 8200,
+   "sold_count": 41000
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-007",
+   "title": "[MẪU] Bỉm quần Merries L44",
+   "seller": {
+    "external_id": "MOCK-DEMO-BABY-OFFICIAL",
+    "name": "Demo Baby Official",
+    "rating": 4.8,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 355000,
+   "original_price": null,
+   "vouchers": [
+    {
+     "source": "platform",
+     "kind": "fixed",
+     "value": 25000,
+     "min_spend": 350000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Lazada giảm 25k đơn từ 350k"
+    }
+   ],
+   "shipping_fee": 12000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 3100,
+   "sold_count": 15000
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-006",
+   "title": "[MẪU] Bỉm quần Merries L44 nội địa Nhật",
+   "seller": {
+    "external_id": "MOCK-DEMO-KHO-BỈM",
+    "name": "Demo Kho Bỉm",
+    "rating": 4.7,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 338000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 20000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 950,
+   "sold_count": 7000
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-007",
+   "title": "[MẪU] Tã quần Merries size L 44 miếng",
+   "seller": {
+    "external_id": "MOCK-DEMO-BỈM-SỮA-LIVE",
+    "name": "Demo Bỉm Sữa Live",
+    "rating": 4.5,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 335000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": null,
+   "shipping_status": "unknown",
+   "mandatory_fees": [],
+   "rating": 4.6,
+   "rating_count": 120,
+   "sold_count": 800
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-011",
+   "title": "[MẪU] Tã dán Merries size L 54 miếng",
+   "seller": {
+    "external_id": "MOCK-DEMO-MẸ-&-BÉ-MALL",
+    "name": "Demo Mẹ & Bé Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 359000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 2100,
+   "sold_count": 9000
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-008",
+   "title": "[MẪU] Tã quần Merries size XL 38 miếng",
+   "seller": {
+    "external_id": "MOCK-DEMO-BABY-OFFICIAL",
+    "name": "Demo Baby Official",
+    "rating": 4.8,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 355000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 12000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 1500,
+   "sold_count": 6200
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-012",
+   "title": "[MẪU] Combo 3 bịch tã quần Merries size L 44 miếng",
+   "seller": {
+    "external_id": "MOCK-DEMO-MẸ-&-BÉ-MALL",
+    "name": "Demo Mẹ & Bé Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 999000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 600,
+   "sold_count": 2500
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-009",
+   "title": "[MẪU] Bỉm Merries size L",
+   "seller": {
+    "external_id": "MOCK-DEMO-TẠP-HOÁ-ONLINE",
+    "name": "Demo Tạp Hoá Online",
+    "rating": 4.2,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 319000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 25000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.3,
+   "rating_count": 45,
+   "sold_count": 300
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-013",
+   "title": "[MẪU] Tã quần Bobby size L 68 miếng",
+   "seller": {
+    "external_id": "MOCK-DEMO-MẸ-&-BÉ-MALL",
+    "name": "Demo Mẹ & Bé Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 329000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 15000,
+   "sold_count": 80000
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-014",
+   "title": "[MẪU] Nước giặt Ariel Matic cửa trước túi 3.6kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-SIÊU-THỊ-ONLINE",
+    "name": "Demo Siêu Thị Online",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 235000,
+   "original_price": 289000,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "percent",
+     "value": 10,
+     "min_spend": 200000,
+     "verified": true,
+     "max_discount": 20000,
+     "requires": null,
+     "description": "Giảm 10% tối đa 20k"
+    }
+   ],
+   "shipping_fee": 18000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 5200,
+   "sold_count": 30000
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-010",
+   "title": "[MẪU] Ariel Matic nước giặt cửa trước dạng túi 3,6kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-HOME-CARE-OFFICIAL",
+    "name": "Demo Home Care Official",
+    "rating": 4.8,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 229000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 20000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 2100,
+   "sold_count": 12000
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-008",
+   "title": "[MẪU] Nước giặt Ariel Matic cửa trước túi 3.6kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-GIA-DỤNG-GIÁ-TỐT",
+    "name": "Demo Gia Dụng Giá Tốt",
+    "rating": 4.6,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 219000,
+   "original_price": null,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 10000,
+     "min_spend": 200000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Giảm 10k đơn từ 200k"
+    },
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 15000,
+     "min_spend": 400000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Giảm 15k đơn từ 400k"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "estimated",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 640,
+   "sold_count": 4100
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-015",
+   "title": "[MẪU] Nước giặt Ariel Matic cửa trên túi 3.6kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-SIÊU-THỊ-ONLINE",
+    "name": "Demo Siêu Thị Online",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 225000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 18000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 3100,
+   "sold_count": 17000
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-011",
+   "title": "[MẪU] Nước giặt Ariel Matic cửa trước túi 2.4kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-HOME-CARE-OFFICIAL",
+    "name": "Demo Home Care Official",
+    "rating": 4.8,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 165000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 20000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 900,
+   "sold_count": 5000
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-016",
+   "title": "[MẪU] Combo 2 túi nước giặt Ariel Matic cửa trước 3.6kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-SIÊU-THỊ-ONLINE",
+    "name": "Demo Siêu Thị Online",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 449000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 800,
+   "sold_count": 3900
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-009",
+   "title": "[MẪU] Nước giặt Ariel 3.6kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-TẠP-HOÁ-SỐ",
+    "name": "Demo Tạp Hoá Số",
+    "rating": 4.3,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 199000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": null,
+   "shipping_status": "unknown",
+   "mandatory_fees": [],
+   "rating": 4.4,
+   "rating_count": 80,
+   "sold_count": 500
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-012",
+   "title": "[MẪU] Nước giặt OMO Matic cửa trước túi 3.6kg",
+   "seller": {
+    "external_id": "MOCK-DEMO-HOME-CARE-OFFICIAL",
+    "name": "Demo Home Care Official",
+    "rating": 4.8,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 215000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 20000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.8,
+   "rating_count": 4000,
+   "sold_count": 22000
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-017",
+   "title": "[MẪU] Apple iPhone 16 Pro 256GB Titan Tự Nhiên chính hãng VN/A",
+   "seller": {
+    "external_id": "MOCK-DEMO-MOBILE-MALL",
+    "name": "Demo Mobile Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 27490000,
+   "original_price": 31990000,
+   "vouchers": [
+    {
+     "source": "platform",
+     "kind": "fixed",
+     "value": 500000,
+     "min_spend": 20000000,
+     "verified": false,
+     "max_discount": null,
+     "requires": "thanh toán thẻ tín dụng đối tác",
+     "description": "Giảm 500k khi trả bằng thẻ đối tác"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 900,
+   "sold_count": 2500
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-013",
+   "title": "[MẪU] Điện thoại iPhone 16 Pro 256GB Natural Titanium VN/A",
+   "seller": {
+    "external_id": "MOCK-DEMO-PHONE-OFFICIAL",
+    "name": "Demo Phone Official",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 27290000,
+   "original_price": null,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 300000,
+     "min_spend": 25000000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Voucher shop 300k"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 400,
+   "sold_count": 1100
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-010",
+   "title": "[MẪU] iPhone 16 Pro 256GB Titan Tự Nhiên VN/A",
+   "seller": {
+    "external_id": "MOCK-DEMO-TÁO-STORE",
+    "name": "Demo Táo Store",
+    "rating": 4.7,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 26990000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 35000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 150,
+   "sold_count": 420
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-018",
+   "title": "[MẪU] iPhone 16 Pro 512GB Titan Tự Nhiên VN/A",
+   "seller": {
+    "external_id": "MOCK-DEMO-MOBILE-MALL",
+    "name": "Demo Mobile Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 33490000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 300,
+   "sold_count": 700
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-014",
+   "title": "[MẪU] iPhone 16 Pro Max 256GB Titan Tự Nhiên VN/A",
+   "seller": {
+    "external_id": "MOCK-DEMO-PHONE-OFFICIAL",
+    "name": "Demo Phone Official",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 30990000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 800,
+   "sold_count": 2000
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-011",
+   "title": "[MẪU] iPhone 16 Pro 256GB Titan Đen VN/A",
+   "seller": {
+    "external_id": "MOCK-DEMO-TÁO-STORE",
+    "name": "Demo Táo Store",
+    "rating": 4.7,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 26890000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 35000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 130,
+   "sold_count": 300
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-019",
+   "title": "[MẪU] Ốp lưng iPhone 16 Pro trong suốt chống sốc",
+   "seller": {
+    "external_id": "MOCK-DEMO-PHỤ-KIỆN",
+    "name": "Demo Phụ Kiện",
+    "rating": 4.6,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 59000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 12000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.6,
+   "rating_count": 9000,
+   "sold_count": 50000
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-015",
+   "title": "[MẪU] iPhone 16 Pro 256GB Titan Tự Nhiên cũ 99%",
+   "seller": {
+    "external_id": "MOCK-DEMO-MÁY-CŨ",
+    "name": "Demo Máy Cũ",
+    "rating": 4.4,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 22900000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 40000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.5,
+   "rating_count": 60,
+   "sold_count": 140
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-012",
+   "title": "[MẪU] iPhone 16 Pro 256GB Titan Tự Nhiên bản Mỹ LL/A",
+   "seller": {
+    "external_id": "MOCK-DEMO-GLOBAL-PHONE",
+    "name": "Demo Global Phone",
+    "rating": 4.3,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 25490000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": null,
+   "shipping_status": "unknown",
+   "mandatory_fees": [],
+   "rating": 4.4,
+   "rating_count": 30,
+   "sold_count": 70
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-020",
+   "title": "[MẪU] Nồi chiên không dầu Philips HD9200/90 4.1L",
+   "seller": {
+    "external_id": "MOCK-DEMO-HOME-APPLIANCE-MALL",
+    "name": "Demo Home Appliance Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 1690000,
+   "original_price": 2490000,
+   "vouchers": [
+    {
+     "source": "store",
+     "kind": "fixed",
+     "value": 100000,
+     "min_spend": 1500000,
+     "verified": true,
+     "max_discount": null,
+     "requires": null,
+     "description": "Giảm 100k đơn từ 1.5 triệu"
+    }
+   ],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 6100,
+   "sold_count": 22000
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-016",
+   "title": "[MẪU] Philips Air Fryer HD9200 4.1 lít",
+   "seller": {
+    "external_id": "MOCK-DEMO-ELECTRONICS-OFFICIAL",
+    "name": "Demo Electronics Official",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 1650000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [
+    {
+     "name": "Phí xử lý hàng cồng kềnh",
+     "amount": 20000
+    }
+   ],
+   "rating": 4.8,
+   "rating_count": 2500,
+   "sold_count": 9000
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-013",
+   "title": "[MẪU] Nồi chiên không dầu Philips HD9200/90 4.1L",
+   "seller": {
+    "external_id": "MOCK-DEMO-BẾP-XINH",
+    "name": "Demo Bếp Xinh",
+    "rating": 4.6,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 1590000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 38000,
+   "shipping_status": "estimated",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 420,
+   "sold_count": 1800
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-021",
+   "title": "[MẪU] Nồi chiên không dầu Philips HD9252/90 4.1L",
+   "seller": {
+    "external_id": "MOCK-DEMO-HOME-APPLIANCE-MALL",
+    "name": "Demo Home Appliance Mall",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 2190000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 3300,
+   "sold_count": 11000
+  },
+  {
+   "marketplace": "lazada",
+   "external_id": "MOCK-LA-017",
+   "title": "[MẪU] Nồi chiên không dầu Philips HD9280/90 6.2L",
+   "seller": {
+    "external_id": "MOCK-DEMO-ELECTRONICS-OFFICIAL",
+    "name": "Demo Electronics Official",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": null
+   },
+   "listed_price": 3490000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 0,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.9,
+   "rating_count": 1200,
+   "sold_count": 4000
+  },
+  {
+   "marketplace": "shopee",
+   "external_id": "MOCK-SH-022",
+   "title": "[MẪU] Giấy nến lót nồi chiên không dầu Philips HD9200 100 tờ",
+   "seller": {
+    "external_id": "MOCK-DEMO-PHỤ-KIỆN",
+    "name": "Demo Phụ Kiện",
+    "rating": 4.6,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 39000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 15000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 12000,
+   "sold_count": 90000
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "external_id": "MOCK-TI-014",
+   "title": "[MẪU] Nồi chiên không dầu Lock&Lock EJF351 5.2L",
+   "seller": {
+    "external_id": "MOCK-DEMO-BẾP-XINH",
+    "name": "Demo Bếp Xinh",
+    "rating": 4.6,
+    "is_official_store": null,
+    "location": null
+   },
+   "listed_price": 1290000,
+   "original_price": null,
+   "vouchers": [],
+   "shipping_fee": 30000,
+   "shipping_status": "verified",
+   "mandatory_fees": [],
+   "rating": 4.7,
+   "rating_count": 2100,
+   "sold_count": 8000
+  }
+ ]
+}

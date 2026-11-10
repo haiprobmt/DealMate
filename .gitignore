@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Secrets / local config
+.env
+*.keystore
+*.jks
+keystore.properties
+**/service-account*.json
+google-services.json
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.kotlin/
+android/captures/
+.idea/
+*.iml
+
+# Misc
+.DS_Store
+backups/
