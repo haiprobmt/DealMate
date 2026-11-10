@@ -76,7 +76,7 @@ async def test_shopee_request_signing_and_response_mapping():
     credential, timestamp, signature = (part.split("=")[1] for part in seen["auth"].removeprefix("SHA256 ").split(", "))
     assert credential == "app123"
     assert signature == hashlib.sha256(f"app123{timestamp}{seen['body']}secret456".encode()).hexdigest()
-    assert json.loads(seen["body"])["variables"]["keyword"] == "anessa 60ml"
+    assert 'productOfferV2(keyword: "anessa 60ml", limit: 30' in json.loads(seen["body"])["query"]
     assert len(offers) == 1, "the malformed node is skipped, not guessed"
     o = offers[0]
     assert (o.external_id, o.listed_price, o.url, o.is_mock) == ("42.777", 365000, "https://shopee.vn/product/42/777", False)

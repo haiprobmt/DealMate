@@ -1,7 +1,8 @@
 """Shopee Việt Nam — Shopee Affiliate Open API (GraphQL).
 
-STATUS: implemented from Shopee's public affiliate documentation and exercised only against
-a fake HTTP transport in tests. It has NOT been verified against the live API because no
+STATUS: implemented from the public description of the API (endpoint, SHA256 request signing
+and the productOfferV2 query, cross-checked against an open-source community client) and
+exercised only against a fake HTTP transport in tests. It has NOT been verified against the live API because no
 affiliate credentials were available during development. ``health_check`` reports
 ``verified_live=True`` only after a real, well-formed API response at runtime.
 See docs/MARKETPLACE_INTEGRATION.md.
@@ -27,10 +28,17 @@ from app.schemas.domain import Marketplace, RawOffer, SellerInfo, ShippingStatus
 
 _FIELDS = ("itemId productName priceMin priceMax imageUrl shopId shopName ratingStar sales "
            "productLink offerLink")
-_SEARCH = ("query($keyword: String, $limit: Int, $page: Int) { productOfferV2(keyword: $keyword, "
-           "limit: $limit, page: $page, sortType: 1) { nodes { %s } } }" % _FIELDS)
-_DETAIL = ("query($itemId: Int64, $shopId: Int64) { productOfferV2(itemId: $itemId, shopId: $shopId) "
-           "{ nodes { %s } } }" % _FIELDS)
+
+
+def _search_query(keyword: str, limit: int) -> str:
+    # Arguments are inlined (json.dumps yields a valid GraphQL string literal), which is the
+    # form used by the documentation examples and community clients.
+    return ("{ productOfferV2(keyword: %s, limit: %d, page: 1, sortType: 1) { nodes { %s } } }"
+            % (json.dumps(keyword, ensure_ascii=False), limit, _FIELDS))
+
+
+def _detail_query(shop_id: int, item_id: int) -> str:
+    return "{ productOfferV2(shopId: %d, itemId: %d) { nodes { %s } } }" % (shop_id, item_id, _FIELDS)
 
 
 class ShopeeAffiliateConnector(MarketplaceConnector):
@@ -51,16 +59,16 @@ class ShopeeAffiliateConnector(MarketplaceConnector):
             f"{self._app_id}{timestamp}{payload}{self._secret}".encode()).hexdigest()
         return f"SHA256 Credential={self._app_id}, Timestamp={timestamp}, Signature={signature}"
 
-    async def _call(self, query: str, variables: dict) -> list[dict]:
+    async def _call(self, query: str) -> list[dict]:
         if not self.configured:
             raise ConnectorNotConfigured(
                 "Thiếu DEALMATE_SHOPEE_AFFILIATE_APP_ID / DEALMATE_SHOPEE_AFFILIATE_SECRET.")
-        payload = json.dumps({"query": query, "variables": variables}, separators=(",", ":"))
+        payload = json.dumps({"query": query}, ensure_ascii=False)
         headers = {"Content-Type": "application/json",
                    "Authorization": self._auth_header(payload, int(time.time()))}
         try:
             async with httpx.AsyncClient(timeout=self._timeout, transport=self._transport) as client:
-                response = await client.post(self._endpoint, content=payload, headers=headers)
+                response = await client.post(self._endpoint, content=payload.encode(), headers=headers)
         except httpx.HTTPError as exc:
             raise ConnectorError(f"Không kết nối được Shopee Affiliate API: {exc!r}") from exc
         if response.status_code != 200:
@@ -96,7 +104,7 @@ class ShopeeAffiliateConnector(MarketplaceConnector):
             return None   # malformed node: skip it rather than guess
 
     async def search_products(self, query: str, limit: int = 30) -> list[RawOffer]:
-        nodes = await self._call(_SEARCH, {"keyword": query, "limit": min(limit, 50), "page": 1})
+        nodes = await self._call(_search_query(query, min(limit, 50)))
         return [o for o in (self._to_offer(n) for n in nodes) if o]
 
     async def get_product_details(self, product_id: str) -> RawOffer | None:
@@ -104,7 +112,7 @@ class ShopeeAffiliateConnector(MarketplaceConnector):
             shop_id, item_id = (int(p) for p in product_id.split("."))
         except ValueError as exc:
             raise ConnectorError("Mã sản phẩm Shopee phải có dạng <shopId>.<itemId>.") from exc
-        nodes = await self._call(_DETAIL, {"itemId": item_id, "shopId": shop_id})
+        nodes = await self._call(_detail_query(shop_id, item_id))
         return self._to_offer(nodes[0]) if nodes else None
 
     async def get_product_url(self, product_id: str) -> str:
@@ -116,7 +124,7 @@ class ShopeeAffiliateConnector(MarketplaceConnector):
             return ConnectorHealth("not_configured",
                                    "Chưa có thông tin Shopee Affiliate (App ID / Secret).")
         try:
-            await self._call(_SEARCH, {"keyword": "test", "limit": 1, "page": 1})
+            await self._call(_search_query("test", 1))
         except ConnectorError as exc:
             return ConnectorHealth("error", str(exc))
         return ConnectorHealth(

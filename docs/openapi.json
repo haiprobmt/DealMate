@@ -1,0 +1,3166 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "DealMate API",
+  "description": "Tìm giá mua thực tế thấp nhất cho đúng sản phẩm.",
+  "version": "0.1.0"
+ },
+ "paths": {
+  "/health": {
+   "get": {
+    "tags": [
+     "health"
+    ],
+    "summary": "Health",
+    "operationId": "health_health_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Health Health Get"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/search": {
+   "post": {
+    "tags": [
+     "search"
+    ],
+    "summary": "Search Text",
+    "operationId": "search_text_api_v1_search_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/SearchRequest"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SearchResponse"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/search/image": {
+   "post": {
+    "tags": [
+     "search"
+    ],
+    "summary": "Search Image",
+    "operationId": "search_image_api_v1_search_image_post",
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "$ref": "#/components/schemas/Body_search_image_api_v1_search_image_post"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SearchResponse"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/search/url": {
+   "post": {
+    "tags": [
+     "search"
+    ],
+    "summary": "Search Url",
+    "operationId": "search_url_api_v1_search_url_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/UrlSearchRequest"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SearchResponse"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/products/{product_id}": {
+   "get": {
+    "tags": [
+     "products"
+    ],
+    "summary": "Get Product",
+    "operationId": "get_product_api_v1_products__product_id__get",
+    "parameters": [
+     {
+      "name": "product_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Product Id"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ProductDetail"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/products/{product_id}/offers": {
+   "get": {
+    "tags": [
+     "products"
+    ],
+    "summary": "Get Product Offers",
+    "operationId": "get_product_offers_api_v1_products__product_id__offers_get",
+    "parameters": [
+     {
+      "name": "product_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Product Id"
+      }
+     },
+     {
+      "name": "variant_id",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "integer"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Variant Id"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ProductOffersResponse"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/wishlist": {
+   "get": {
+    "tags": [
+     "wishlist"
+    ],
+    "summary": "List Wishlist",
+    "operationId": "list_wishlist_api_v1_wishlist_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": {
+          "items": {
+           "$ref": "#/components/schemas/WishlistItem"
+          },
+          "type": "array"
+         },
+         "type": "object",
+         "title": "Response List Wishlist Api V1 Wishlist Get"
+        }
+       }
+      }
+     }
+    }
+   },
+   "post": {
+    "tags": [
+     "wishlist"
+    ],
+    "summary": "Add To Wishlist",
+    "operationId": "add_to_wishlist_api_v1_wishlist_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/WishlistCreate"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/WishlistItem"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/wishlist/{wishlist_id}": {
+   "delete": {
+    "tags": [
+     "wishlist"
+    ],
+    "summary": "Remove From Wishlist",
+    "operationId": "remove_from_wishlist_api_v1_wishlist__wishlist_id__delete",
+    "parameters": [
+     {
+      "name": "wishlist_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Wishlist Id"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/price-alerts": {
+   "get": {
+    "tags": [
+     "wishlist"
+    ],
+    "summary": "List Alerts",
+    "operationId": "list_alerts_api_v1_price_alerts_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": {
+          "items": {
+           "$ref": "#/components/schemas/PriceAlertOut"
+          },
+          "type": "array"
+         },
+         "type": "object",
+         "title": "Response List Alerts Api V1 Price Alerts Get"
+        }
+       }
+      }
+     }
+    }
+   },
+   "post": {
+    "tags": [
+     "wishlist"
+    ],
+    "summary": "Create Alert",
+    "operationId": "create_alert_api_v1_price_alerts_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/PriceAlertCreate"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/PriceAlertOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/price-alerts/{alert_id}": {
+   "delete": {
+    "tags": [
+     "wishlist"
+    ],
+    "summary": "Delete Alert",
+    "operationId": "delete_alert_api_v1_price_alerts__alert_id__delete",
+    "parameters": [
+     {
+      "name": "alert_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Alert Id"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/history": {
+   "get": {
+    "tags": [
+     "history"
+    ],
+    "summary": "Get History",
+    "operationId": "get_history_api_v1_history_get",
+    "parameters": [
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "integer",
+       "maximum": 100,
+       "minimum": 1,
+       "default": 30,
+       "title": "Limit"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HistoryResponse"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "delete": {
+    "tags": [
+     "history"
+    ],
+    "summary": "Clear History",
+    "operationId": "clear_history_api_v1_history_delete",
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     }
+    }
+   }
+  },
+  "/api/v1/me": {
+   "get": {
+    "tags": [
+     "meta"
+    ],
+    "summary": "Me",
+    "operationId": "me_api_v1_me_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/MeResponse"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/sources/status": {
+   "get": {
+    "tags": [
+     "meta"
+    ],
+    "summary": "Sources Status",
+    "operationId": "sources_status_api_v1_sources_status_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SourcesStatusResponse"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/explore": {
+   "get": {
+    "tags": [
+     "meta"
+    ],
+    "summary": "Explore",
+    "description": "Built only from prices this installation has itself recorded — nothing is invented.\nMock and real data are never mixed: rows are filtered by the current mode.",
+    "operationId": "explore_api_v1_explore_get",
+    "parameters": [
+     {
+      "name": "category",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string",
+         "maxLength": 60
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Category"
+      }
+     },
+     {
+      "name": "marketplace",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "$ref": "#/components/schemas/Marketplace"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Marketplace"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/TrendingResponse"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/notifications": {
+   "get": {
+    "tags": [
+     "meta"
+    ],
+    "summary": "List Notifications",
+    "operationId": "list_notifications_api_v1_notifications_get",
+    "parameters": [
+     {
+      "name": "unread_only",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "boolean",
+       "default": false,
+       "title": "Unread Only"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": {
+          "type": "array",
+          "items": {
+           "$ref": "#/components/schemas/NotificationOut"
+          }
+         },
+         "title": "Response List Notifications Api V1 Notifications Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/notifications/{notification_id}/read": {
+   "post": {
+    "tags": [
+     "meta"
+    ],
+    "summary": "Mark Read",
+    "operationId": "mark_read_api_v1_notifications__notification_id__read_post",
+    "parameters": [
+     {
+      "name": "notification_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer",
+       "title": "Notification Id"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/devices": {
+   "post": {
+    "tags": [
+     "meta"
+    ],
+    "summary": "Register Device",
+    "operationId": "register_device_api_v1_devices_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/DeviceRegister"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/assistant/ask": {
+   "post": {
+    "tags": [
+     "meta"
+    ],
+    "summary": "Ask Assistant",
+    "operationId": "ask_assistant_api_v1_assistant_ask_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/AssistantRequest"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AssistantResponse"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "AppliedVoucher": {
+    "properties": {
+     "voucher": {
+      "$ref": "#/components/schemas/Voucher"
+     },
+     "discount": {
+      "type": "integer",
+      "title": "Discount"
+     },
+     "estimated": {
+      "type": "boolean",
+      "title": "Estimated"
+     }
+    },
+    "type": "object",
+    "required": [
+     "voucher",
+     "discount",
+     "estimated"
+    ],
+    "title": "AppliedVoucher"
+   },
+   "AssistantRequest": {
+    "properties": {
+     "question": {
+      "type": "string",
+      "maxLength": 500,
+      "minLength": 2,
+      "title": "Question"
+     },
+     "variant_ids": {
+      "items": {
+       "type": "integer"
+      },
+      "type": "array",
+      "maxItems": 5,
+      "minItems": 1,
+      "title": "Variant Ids"
+     }
+    },
+    "type": "object",
+    "required": [
+     "question",
+     "variant_ids"
+    ],
+    "title": "AssistantRequest"
+   },
+   "AssistantResponse": {
+    "properties": {
+     "answer": {
+      "type": "string",
+      "title": "Answer"
+     },
+     "generated_by": {
+      "type": "string",
+      "title": "Generated By"
+     },
+     "facts": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Facts"
+     },
+     "disclaimer": {
+      "type": "string",
+      "title": "Disclaimer"
+     }
+    },
+    "type": "object",
+    "required": [
+     "answer",
+     "generated_by",
+     "facts",
+     "disclaimer"
+    ],
+    "title": "AssistantResponse"
+   },
+   "BestOffer": {
+    "properties": {
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "variant_title": {
+      "type": "string",
+      "title": "Variant Title"
+     },
+     "offer_id": {
+      "type": "integer",
+      "title": "Offer Id"
+     },
+     "final_price": {
+      "type": "integer",
+      "title": "Final Price"
+     },
+     "confidence": {
+      "$ref": "#/components/schemas/PriceConfidence"
+     },
+     "marketplace": {
+      "$ref": "#/components/schemas/Marketplace"
+     },
+     "marketplace_name": {
+      "type": "string",
+      "title": "Marketplace Name"
+     },
+     "explanation": {
+      "type": "string",
+      "title": "Explanation"
+     },
+     "caveat": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Caveat"
+     }
+    },
+    "type": "object",
+    "required": [
+     "variant_id",
+     "variant_title",
+     "offer_id",
+     "final_price",
+     "confidence",
+     "marketplace",
+     "marketplace_name",
+     "explanation"
+    ],
+    "title": "BestOffer"
+   },
+   "Body_search_image_api_v1_search_image_post": {
+    "properties": {
+     "image": {
+      "type": "string",
+      "contentMediaType": "application/octet-stream",
+      "title": "Image"
+     },
+     "hint": {
+      "anyOf": [
+       {
+        "type": "string",
+        "maxLength": 200
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Hint"
+     }
+    },
+    "type": "object",
+    "required": [
+     "image"
+    ],
+    "title": "Body_search_image_api_v1_search_image_post"
+   },
+   "Clarification": {
+    "properties": {
+     "needed": {
+      "type": "boolean",
+      "title": "Needed",
+      "default": false
+     },
+     "message": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Message"
+     },
+     "suggestions": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Suggestions",
+      "default": []
+     }
+    },
+    "type": "object",
+    "title": "Clarification"
+   },
+   "DeviceRegister": {
+    "properties": {
+     "token": {
+      "type": "string",
+      "maxLength": 4096,
+      "minLength": 20,
+      "title": "Token"
+     },
+     "platform": {
+      "type": "string",
+      "pattern": "^(android)$",
+      "title": "Platform",
+      "default": "android"
+     }
+    },
+    "type": "object",
+    "required": [
+     "token"
+    ],
+    "title": "DeviceRegister"
+   },
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "type": "array",
+      "title": "Detail"
+     }
+    },
+    "type": "object",
+    "title": "HTTPValidationError"
+   },
+   "HistoryResponse": {
+    "properties": {
+     "searches": {
+      "items": {
+       "$ref": "#/components/schemas/SearchHistoryItem"
+      },
+      "type": "array",
+      "title": "Searches"
+     },
+     "viewed_products": {
+      "items": {
+       "$ref": "#/components/schemas/ViewedProductItem"
+      },
+      "type": "array",
+      "title": "Viewed Products"
+     }
+    },
+    "type": "object",
+    "required": [
+     "searches",
+     "viewed_products"
+    ],
+    "title": "HistoryResponse"
+   },
+   "InterpretedQuery": {
+    "properties": {
+     "raw": {
+      "type": "string",
+      "title": "Raw"
+     },
+     "interpreter": {
+      "type": "string",
+      "title": "Interpreter"
+     },
+     "spec": {
+      "$ref": "#/components/schemas/ProductQuery"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Notes",
+      "default": []
+     }
+    },
+    "type": "object",
+    "required": [
+     "raw",
+     "interpreter",
+     "spec"
+    ],
+    "title": "InterpretedQuery"
+   },
+   "Marketplace": {
+    "type": "string",
+    "enum": [
+     "shopee",
+     "lazada",
+     "tiktok_shop"
+    ],
+    "title": "Marketplace"
+   },
+   "MatchResult": {
+    "properties": {
+     "match_type": {
+      "$ref": "#/components/schemas/MatchType"
+     },
+     "confidence": {
+      "type": "number",
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence"
+     },
+     "matched_attributes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Matched Attributes"
+     },
+     "different_attributes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Different Attributes"
+     },
+     "unknown_attributes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Unknown Attributes"
+     },
+     "reason": {
+      "type": "string",
+      "title": "Reason",
+      "default": ""
+     },
+     "decided_by": {
+      "type": "string",
+      "title": "Decided By",
+      "default": "rules"
+     }
+    },
+    "type": "object",
+    "required": [
+     "match_type",
+     "confidence"
+    ],
+    "title": "MatchResult"
+   },
+   "MatchType": {
+    "type": "string",
+    "enum": [
+     "exact",
+     "likely",
+     "similar",
+     "different"
+    ],
+    "title": "MatchType"
+   },
+   "MeResponse": {
+    "properties": {
+     "user_id": {
+      "type": "integer",
+      "title": "User Id"
+     },
+     "display_name": {
+      "type": "string",
+      "title": "Display Name"
+     },
+     "demo_mode": {
+      "type": "boolean",
+      "title": "Demo Mode"
+     }
+    },
+    "type": "object",
+    "required": [
+     "user_id",
+     "display_name",
+     "demo_mode"
+    ],
+    "title": "MeResponse"
+   },
+   "NotificationOut": {
+    "properties": {
+     "id": {
+      "type": "integer",
+      "title": "Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "body": {
+      "type": "string",
+      "title": "Body"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Url"
+     },
+     "price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Price"
+     },
+     "variant_id": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Variant Id"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "is_mock": {
+      "type": "boolean",
+      "title": "Is Mock",
+      "default": false
+     },
+     "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Created At"
+     },
+     "read_at": {
+      "anyOf": [
+       {
+        "type": "string",
+        "format": "date-time"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Read At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "title",
+     "body",
+     "status",
+     "created_at"
+    ],
+    "title": "NotificationOut"
+   },
+   "OfferOut": {
+    "properties": {
+     "id": {
+      "type": "integer",
+      "title": "Id"
+     },
+     "marketplace": {
+      "$ref": "#/components/schemas/Marketplace"
+     },
+     "marketplace_name": {
+      "type": "string",
+      "title": "Marketplace Name"
+     },
+     "is_mock": {
+      "type": "boolean",
+      "title": "Is Mock"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "url": {
+      "type": "string",
+      "title": "Url"
+     },
+     "image_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Image Url"
+     },
+     "seller": {
+      "$ref": "#/components/schemas/SellerOut"
+     },
+     "price": {
+      "$ref": "#/components/schemas/PriceBreakdown"
+     },
+     "original_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Original Price"
+     },
+     "match": {
+      "$ref": "#/components/schemas/MatchResult"
+     },
+     "rating": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Rating"
+     },
+     "rating_count": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Rating Count"
+     },
+     "sold_count": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Sold Count"
+     },
+     "in_stock": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "In Stock"
+     },
+     "retrieved_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Retrieved At"
+     },
+     "is_stale": {
+      "type": "boolean",
+      "title": "Is Stale",
+      "default": false
+     },
+     "over_budget": {
+      "type": "boolean",
+      "title": "Over Budget",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "marketplace",
+     "marketplace_name",
+     "is_mock",
+     "title",
+     "url",
+     "seller",
+     "price",
+     "match",
+     "retrieved_at"
+    ],
+    "title": "OfferOut"
+   },
+   "PriceAlertCreate": {
+    "properties": {
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "target_price": {
+      "type": "integer",
+      "maximum": 10000000000.0,
+      "exclusiveMinimum": 0.0,
+      "title": "Target Price"
+     }
+    },
+    "type": "object",
+    "required": [
+     "variant_id",
+     "target_price"
+    ],
+    "title": "PriceAlertCreate"
+   },
+   "PriceAlertOut": {
+    "properties": {
+     "id": {
+      "type": "integer",
+      "title": "Id"
+     },
+     "product_id": {
+      "type": "integer",
+      "title": "Product Id"
+     },
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "target_price": {
+      "type": "integer",
+      "title": "Target Price"
+     },
+     "is_active": {
+      "type": "boolean",
+      "title": "Is Active"
+     },
+     "last_notified_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Last Notified Price"
+     },
+     "last_notified_at": {
+      "anyOf": [
+       {
+        "type": "string",
+        "format": "date-time"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Last Notified At"
+     },
+     "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Created At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "product_id",
+     "variant_id",
+     "title",
+     "target_price",
+     "is_active",
+     "created_at"
+    ],
+    "title": "PriceAlertOut"
+   },
+   "PriceBreakdown": {
+    "properties": {
+     "currency": {
+      "type": "string",
+      "title": "Currency",
+      "default": "VND"
+     },
+     "quantity": {
+      "type": "integer",
+      "title": "Quantity",
+      "default": 1
+     },
+     "listed_price": {
+      "type": "integer",
+      "title": "Listed Price"
+     },
+     "subtotal": {
+      "type": "integer",
+      "title": "Subtotal"
+     },
+     "voucher_discount": {
+      "type": "integer",
+      "title": "Voucher Discount"
+     },
+     "applied_vouchers": {
+      "items": {
+       "$ref": "#/components/schemas/AppliedVoucher"
+      },
+      "type": "array",
+      "title": "Applied Vouchers"
+     },
+     "skipped_vouchers": {
+      "items": {
+       "$ref": "#/components/schemas/SkippedVoucher"
+      },
+      "type": "array",
+      "title": "Skipped Vouchers"
+     },
+     "shipping_fee": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Shipping Fee"
+     },
+     "shipping_status": {
+      "$ref": "#/components/schemas/ShippingStatus"
+     },
+     "mandatory_fees": {
+      "type": "integer",
+      "title": "Mandatory Fees"
+     },
+     "final_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Final Price"
+     },
+     "known_subtotal": {
+      "type": "integer",
+      "title": "Known Subtotal"
+     },
+     "confidence": {
+      "$ref": "#/components/schemas/PriceConfidence"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Notes"
+     }
+    },
+    "type": "object",
+    "required": [
+     "listed_price",
+     "subtotal",
+     "voucher_discount",
+     "shipping_fee",
+     "shipping_status",
+     "mandatory_fees",
+     "final_price",
+     "known_subtotal",
+     "confidence"
+    ],
+    "title": "PriceBreakdown"
+   },
+   "PriceConfidence": {
+    "type": "string",
+    "enum": [
+     "verified",
+     "estimated",
+     "incomplete"
+    ],
+    "title": "PriceConfidence"
+   },
+   "PriceDropItem": {
+    "properties": {
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "product_id": {
+      "type": "integer",
+      "title": "Product Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "image_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Image Url"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Category"
+     },
+     "previous_lowest_price": {
+      "type": "integer",
+      "title": "Previous Lowest Price"
+     },
+     "current_lowest_price": {
+      "type": "integer",
+      "title": "Current Lowest Price"
+     },
+     "marketplace": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/Marketplace"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "is_mock": {
+      "type": "boolean",
+      "title": "Is Mock",
+      "default": false
+     },
+     "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Recorded At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "variant_id",
+     "product_id",
+     "title",
+     "previous_lowest_price",
+     "current_lowest_price",
+     "recorded_at"
+    ],
+    "title": "PriceDropItem"
+   },
+   "PricePoint": {
+    "properties": {
+     "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Recorded At"
+     },
+     "lowest_final_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Lowest Final Price"
+     },
+     "confidence": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/PriceConfidence"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "marketplace": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/Marketplace"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "is_mock": {
+      "type": "boolean",
+      "title": "Is Mock",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "recorded_at",
+     "lowest_final_price",
+     "confidence"
+    ],
+    "title": "PricePoint"
+   },
+   "ProductAttributes": {
+    "properties": {
+     "brand": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Brand"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Category"
+     },
+     "product_line": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Product Line"
+     },
+     "model": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Model"
+     },
+     "sku": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Sku"
+     },
+     "gtin": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Gtin"
+     },
+     "volume_ml": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Volume Ml"
+     },
+     "weight_g": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Weight G"
+     },
+     "count": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Count"
+     },
+     "pack_quantity": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Pack Quantity"
+     },
+     "size": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Size"
+     },
+     "storage_gb": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Storage Gb"
+     },
+     "color": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Color"
+     },
+     "condition": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Condition"
+     },
+     "origin": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Origin"
+     },
+     "traits": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object",
+      "title": "Traits"
+     }
+    },
+    "additionalProperties": false,
+    "type": "object",
+    "title": "ProductAttributes",
+    "description": "Canonical, marketplace-independent description. ``None`` always means *unknown*."
+   },
+   "ProductDetail": {
+    "properties": {
+     "product_id": {
+      "type": "integer",
+      "title": "Product Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "brand": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Brand"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Category"
+     },
+     "image_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Image Url"
+     },
+     "variants": {
+      "items": {
+       "$ref": "#/components/schemas/VariantSummary"
+      },
+      "type": "array",
+      "title": "Variants"
+     }
+    },
+    "type": "object",
+    "required": [
+     "product_id",
+     "title",
+     "brand",
+     "category",
+     "variants"
+    ],
+    "title": "ProductDetail"
+   },
+   "ProductGroup": {
+    "properties": {
+     "product_id": {
+      "type": "integer",
+      "title": "Product Id"
+     },
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "image_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Image Url"
+     },
+     "attributes": {
+      "$ref": "#/components/schemas/ProductAttributes"
+     },
+     "match": {
+      "$ref": "#/components/schemas/MatchResult"
+     },
+     "offers": {
+      "items": {
+       "$ref": "#/components/schemas/OfferOut"
+      },
+      "type": "array",
+      "title": "Offers"
+     },
+     "best_offer_id": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Best Offer Id"
+     },
+     "lowest_final_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Lowest Final Price"
+     },
+     "lowest_price_confidence": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/PriceConfidence"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "offer_count": {
+      "type": "integer",
+      "title": "Offer Count",
+      "default": 0
+     },
+     "in_wishlist": {
+      "type": "boolean",
+      "title": "In Wishlist",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "product_id",
+     "variant_id",
+     "title",
+     "attributes",
+     "match",
+     "offers"
+    ],
+    "title": "ProductGroup"
+   },
+   "ProductOffersResponse": {
+    "properties": {
+     "product_id": {
+      "type": "integer",
+      "title": "Product Id"
+     },
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "image_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Image Url"
+     },
+     "attributes": {
+      "$ref": "#/components/schemas/ProductAttributes"
+     },
+     "demo_mode": {
+      "type": "boolean",
+      "title": "Demo Mode"
+     },
+     "offers": {
+      "items": {
+       "$ref": "#/components/schemas/OfferOut"
+      },
+      "type": "array",
+      "title": "Offers"
+     },
+     "best_offer_id": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Best Offer Id"
+     },
+     "price_history": {
+      "items": {
+       "$ref": "#/components/schemas/PricePoint"
+      },
+      "type": "array",
+      "title": "Price History"
+     },
+     "in_wishlist": {
+      "type": "boolean",
+      "title": "In Wishlist",
+      "default": false
+     },
+     "wishlist_id": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Wishlist Id"
+     },
+     "target_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Target Price"
+     }
+    },
+    "type": "object",
+    "required": [
+     "product_id",
+     "variant_id",
+     "title",
+     "attributes",
+     "demo_mode",
+     "offers",
+     "price_history"
+    ],
+    "title": "ProductOffersResponse"
+   },
+   "ProductQuery": {
+    "properties": {
+     "brand": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Brand"
+     },
+     "product_name": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Product Name"
+     },
+     "model": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Model"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Category"
+     },
+     "variant": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Variant"
+     },
+     "volume": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Volume"
+     },
+     "weight": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Weight"
+     },
+     "size": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Size"
+     },
+     "quantity": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Quantity"
+     },
+     "count": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Count"
+     },
+     "storage": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Storage"
+     },
+     "color": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Color"
+     },
+     "max_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Max Price"
+     },
+     "min_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Min Price"
+     },
+     "currency": {
+      "type": "string",
+      "title": "Currency",
+      "default": "VND"
+     },
+     "constraints": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Constraints"
+     },
+     "uncertain_fields": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Uncertain Fields"
+     },
+     "search_keywords": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Search Keywords"
+     }
+    },
+    "additionalProperties": false,
+    "type": "object",
+    "title": "ProductQuery",
+    "description": "Structured interpretation of what the user wants. ``None`` == not specified."
+   },
+   "SearchHistoryItem": {
+    "properties": {
+     "id": {
+      "type": "integer",
+      "title": "Id"
+     },
+     "search_type": {
+      "type": "string",
+      "title": "Search Type"
+     },
+     "query": {
+      "type": "string",
+      "title": "Query"
+     },
+     "result_count": {
+      "type": "integer",
+      "title": "Result Count"
+     },
+     "lowest_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Lowest Price"
+     },
+     "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Created At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "search_type",
+     "query",
+     "result_count",
+     "created_at"
+    ],
+    "title": "SearchHistoryItem"
+   },
+   "SearchRequest": {
+    "properties": {
+     "query": {
+      "type": "string",
+      "maxLength": 300,
+      "minLength": 2,
+      "title": "Query"
+     },
+     "marketplaces": {
+      "anyOf": [
+       {
+        "items": {
+         "$ref": "#/components/schemas/Marketplace"
+        },
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Marketplaces"
+     },
+     "quantity": {
+      "type": "integer",
+      "maximum": 20.0,
+      "minimum": 1.0,
+      "title": "Quantity",
+      "default": 1
+     },
+     "include_similar": {
+      "type": "boolean",
+      "title": "Include Similar",
+      "default": true
+     }
+    },
+    "type": "object",
+    "required": [
+     "query"
+    ],
+    "title": "SearchRequest"
+   },
+   "SearchResponse": {
+    "properties": {
+     "search_id": {
+      "type": "integer",
+      "title": "Search Id"
+     },
+     "search_type": {
+      "type": "string",
+      "title": "Search Type"
+     },
+     "query": {
+      "$ref": "#/components/schemas/InterpretedQuery"
+     },
+     "demo_mode": {
+      "type": "boolean",
+      "title": "Demo Mode"
+     },
+     "partial": {
+      "type": "boolean",
+      "title": "Partial"
+     },
+     "sources": {
+      "items": {
+       "$ref": "#/components/schemas/SourceResult"
+      },
+      "type": "array",
+      "title": "Sources"
+     },
+     "best": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/BestOffer"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "groups": {
+      "items": {
+       "$ref": "#/components/schemas/ProductGroup"
+      },
+      "type": "array",
+      "title": "Groups"
+     },
+     "similar_groups": {
+      "items": {
+       "$ref": "#/components/schemas/ProductGroup"
+      },
+      "type": "array",
+      "title": "Similar Groups"
+     },
+     "excluded_count": {
+      "type": "integer",
+      "title": "Excluded Count",
+      "default": 0
+     },
+     "over_budget_count": {
+      "type": "integer",
+      "title": "Over Budget Count",
+      "default": 0
+     },
+     "clarification": {
+      "$ref": "#/components/schemas/Clarification",
+      "default": {
+       "needed": false,
+       "suggestions": []
+      }
+     },
+     "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Generated At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "search_id",
+     "search_type",
+     "query",
+     "demo_mode",
+     "partial",
+     "sources",
+     "groups",
+     "similar_groups",
+     "generated_at"
+    ],
+    "title": "SearchResponse"
+   },
+   "SellerOut": {
+    "properties": {
+     "name": {
+      "type": "string",
+      "title": "Name"
+     },
+     "rating": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Rating"
+     },
+     "is_official_store": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Is Official Store"
+     },
+     "location": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Location"
+     }
+    },
+    "type": "object",
+    "required": [
+     "name"
+    ],
+    "title": "SellerOut"
+   },
+   "ShippingStatus": {
+    "type": "string",
+    "enum": [
+     "verified",
+     "estimated",
+     "unknown"
+    ],
+    "title": "ShippingStatus"
+   },
+   "SkippedVoucher": {
+    "properties": {
+     "voucher": {
+      "$ref": "#/components/schemas/Voucher"
+     },
+     "reason": {
+      "type": "string",
+      "title": "Reason"
+     }
+    },
+    "type": "object",
+    "required": [
+     "voucher",
+     "reason"
+    ],
+    "title": "SkippedVoucher"
+   },
+   "SourceResult": {
+    "properties": {
+     "marketplace": {
+      "$ref": "#/components/schemas/Marketplace"
+     },
+     "marketplace_name": {
+      "type": "string",
+      "title": "Marketplace Name"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "is_mock": {
+      "type": "boolean",
+      "title": "Is Mock"
+     },
+     "offers_found": {
+      "type": "integer",
+      "title": "Offers Found",
+      "default": 0
+     },
+     "elapsed_ms": {
+      "type": "integer",
+      "title": "Elapsed Ms",
+      "default": 0
+     },
+     "message": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Message"
+     }
+    },
+    "type": "object",
+    "required": [
+     "marketplace",
+     "marketplace_name",
+     "status",
+     "is_mock"
+    ],
+    "title": "SourceResult"
+   },
+   "SourceStatus": {
+    "properties": {
+     "marketplace": {
+      "$ref": "#/components/schemas/Marketplace"
+     },
+     "marketplace_name": {
+      "type": "string",
+      "title": "Marketplace Name"
+     },
+     "connector": {
+      "type": "string",
+      "title": "Connector"
+     },
+     "is_mock": {
+      "type": "boolean",
+      "title": "Is Mock"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "verified_live": {
+      "type": "boolean",
+      "title": "Verified Live"
+     },
+     "message": {
+      "type": "string",
+      "title": "Message"
+     },
+     "checked_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Checked At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "marketplace",
+     "marketplace_name",
+     "connector",
+     "is_mock",
+     "status",
+     "verified_live",
+     "message",
+     "checked_at"
+    ],
+    "title": "SourceStatus"
+   },
+   "SourcesStatusResponse": {
+    "properties": {
+     "demo_mode": {
+      "type": "boolean",
+      "title": "Demo Mode"
+     },
+     "ai_available": {
+      "type": "boolean",
+      "title": "Ai Available"
+     },
+     "ai_model": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Ai Model"
+     },
+     "push_configured": {
+      "type": "boolean",
+      "title": "Push Configured"
+     },
+     "price_check_interval_minutes": {
+      "type": "integer",
+      "title": "Price Check Interval Minutes"
+     },
+     "sources": {
+      "items": {
+       "$ref": "#/components/schemas/SourceStatus"
+      },
+      "type": "array",
+      "title": "Sources"
+     }
+    },
+    "type": "object",
+    "required": [
+     "demo_mode",
+     "ai_available",
+     "ai_model",
+     "push_configured",
+     "price_check_interval_minutes",
+     "sources"
+    ],
+    "title": "SourcesStatusResponse"
+   },
+   "TrendingResponse": {
+    "properties": {
+     "demo_mode": {
+      "type": "boolean",
+      "title": "Demo Mode"
+     },
+     "available": {
+      "type": "boolean",
+      "title": "Available"
+     },
+     "reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Reason"
+     },
+     "price_drops": {
+      "items": {
+       "$ref": "#/components/schemas/PriceDropItem"
+      },
+      "type": "array",
+      "title": "Price Drops",
+      "default": []
+     },
+     "recently_seen": {
+      "items": {
+       "$ref": "#/components/schemas/VariantSummary"
+      },
+      "type": "array",
+      "title": "Recently Seen",
+      "default": []
+     }
+    },
+    "type": "object",
+    "required": [
+     "demo_mode",
+     "available"
+    ],
+    "title": "TrendingResponse",
+    "description": "Explore: only real recorded price drops; empty with a reason when there is no data."
+   },
+   "UrlSearchRequest": {
+    "properties": {
+     "url": {
+      "type": "string",
+      "maxLength": 2000,
+      "minLength": 10,
+      "title": "Url"
+     },
+     "marketplaces": {
+      "anyOf": [
+       {
+        "items": {
+         "$ref": "#/components/schemas/Marketplace"
+        },
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Marketplaces"
+     }
+    },
+    "type": "object",
+    "required": [
+     "url"
+    ],
+    "title": "UrlSearchRequest"
+   },
+   "ValidationError": {
+    "properties": {
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "type": "array",
+      "title": "Location"
+     },
+     "msg": {
+      "type": "string",
+      "title": "Message"
+     },
+     "type": {
+      "type": "string",
+      "title": "Error Type"
+     },
+     "input": {
+      "title": "Input"
+     },
+     "ctx": {
+      "type": "object",
+      "title": "Context"
+     }
+    },
+    "type": "object",
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError"
+   },
+   "VariantSummary": {
+    "properties": {
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "attributes": {
+      "$ref": "#/components/schemas/ProductAttributes"
+     },
+     "lowest_final_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Lowest Final Price"
+     },
+     "lowest_price_confidence": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/PriceConfidence"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "offer_count": {
+      "type": "integer",
+      "title": "Offer Count",
+      "default": 0
+     }
+    },
+    "type": "object",
+    "required": [
+     "variant_id",
+     "title",
+     "attributes"
+    ],
+    "title": "VariantSummary"
+   },
+   "ViewedProductItem": {
+    "properties": {
+     "product_id": {
+      "type": "integer",
+      "title": "Product Id"
+     },
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "image_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Image Url"
+     },
+     "lowest_final_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Lowest Final Price"
+     },
+     "viewed_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Viewed At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "product_id",
+     "variant_id",
+     "title",
+     "viewed_at"
+    ],
+    "title": "ViewedProductItem"
+   },
+   "Voucher": {
+    "properties": {
+     "code": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Code"
+     },
+     "source": {
+      "type": "string",
+      "pattern": "^(store|platform)$",
+      "title": "Source"
+     },
+     "kind": {
+      "type": "string",
+      "pattern": "^(fixed|percent)$",
+      "title": "Kind"
+     },
+     "value": {
+      "type": "integer",
+      "exclusiveMinimum": 0.0,
+      "title": "Value"
+     },
+     "max_discount": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Max Discount"
+     },
+     "min_spend": {
+      "type": "integer",
+      "title": "Min Spend",
+      "default": 0
+     },
+     "verified": {
+      "type": "boolean",
+      "title": "Verified",
+      "default": false
+     },
+     "requires": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Requires"
+     },
+     "description": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Description"
+     }
+    },
+    "type": "object",
+    "required": [
+     "source",
+     "kind",
+     "value"
+    ],
+    "title": "Voucher"
+   },
+   "WishlistCreate": {
+    "properties": {
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "target_price": {
+      "anyOf": [
+       {
+        "type": "integer",
+        "maximum": 10000000000.0,
+        "exclusiveMinimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Target Price"
+     }
+    },
+    "type": "object",
+    "required": [
+     "variant_id"
+    ],
+    "title": "WishlistCreate"
+   },
+   "WishlistItem": {
+    "properties": {
+     "id": {
+      "type": "integer",
+      "title": "Id"
+     },
+     "product_id": {
+      "type": "integer",
+      "title": "Product Id"
+     },
+     "variant_id": {
+      "type": "integer",
+      "title": "Variant Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "image_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Image Url"
+     },
+     "current_lowest_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Current Lowest Price"
+     },
+     "current_price_confidence": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/PriceConfidence"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "current_marketplace": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/Marketplace"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "current_offer_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Current Offer Url"
+     },
+     "previous_lowest_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Previous Lowest Price"
+     },
+     "last_checked_at": {
+      "anyOf": [
+       {
+        "type": "string",
+        "format": "date-time"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Last Checked At"
+     },
+     "target_price": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Target Price"
+     },
+     "alert_id": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Alert Id"
+     },
+     "is_mock": {
+      "type": "boolean",
+      "title": "Is Mock",
+      "default": false
+     },
+     "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Created At"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "product_id",
+     "variant_id",
+     "title",
+     "created_at"
+    ],
+    "title": "WishlistItem"
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+# Automatic HTTPS for the DealMate API. Set DEALMATE_DOMAIN in .env to a hostname that
+# resolves to this machine (ports 80/443 reachable) so Caddy can obtain a certificate.
+{$DEALMATE_DOMAIN} {
+	encode gzip
+	request_body {
+		max_size 6MB
+	}
+	reverse_proxy api:8000
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		-Server
+	}
+}

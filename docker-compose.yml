@@ -1,0 +1,72 @@
+# DealMate — private family deployment.
+#   cp .env.example .env   (edit secrets)   &&   docker compose up -d --build
+# HTTPS (recommended for the phone):  docker compose --profile https up -d
+name: dealmate
+
+x-backend: &backend
+  build:
+    context: ./backend
+    args:
+      PYTHON_IMAGE: ${PYTHON_IMAGE:-python:3.13-slim}
+  restart: unless-stopped
+  env_file: .env
+  environment:
+    DEALMATE_DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-dealmate}:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-dealmate}
+  depends_on:
+    db:
+      condition: service_healthy
+
+services:
+  db:
+    image: ${POSTGRES_IMAGE:-postgres:16-alpine}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-dealmate}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-dealmate}
+    volumes:
+      - dealmate-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    # The database is NOT published to the host: only the backend containers can reach it.
+
+  api:
+    <<: *backend
+    ports:
+      # Bound to localhost by default; Caddy (https profile) or your own reverse proxy fronts it.
+      - "${DEALMATE_API_BIND:-127.0.0.1}:8000:8000"
+
+  price-monitor:
+    <<: *backend
+    command: ["python", "-m", "workers.price_monitor"]
+    healthcheck: { disable: true }
+    depends_on:
+      api:
+        condition: service_healthy     # the API container applies the migrations first
+
+  notification-worker:
+    <<: *backend
+    command: ["python", "-m", "workers.notification_worker"]
+    healthcheck: { disable: true }
+    depends_on:
+      api:
+        condition: service_healthy
+
+  caddy:
+    image: ${CADDY_IMAGE:-caddy:2-alpine}
+    profiles: ["https"]
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      DEALMATE_DOMAIN: ${DEALMATE_DOMAIN:-localhost}
+    volumes:
+      - ./infrastructure/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+    depends_on: [api]
+
+volumes:
+  dealmate-db:
+  caddy-data:
