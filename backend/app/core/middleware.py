@@ -15,6 +15,10 @@ from app.core.logging import get_logger, request_id_var
 log = get_logger("dealmate.http")
 
 
+class _TooLarge(Exception):
+    pass
+
+
 class RequestContextMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         incoming = request.headers.get("x-request-id", "")
@@ -23,8 +27,15 @@ class RequestContextMiddleware(BaseHTTPMiddleware):
         started = time.perf_counter()
         try:
             try:
+                declared = request.headers.get("content-length", "0")
+                if declared.isdigit() and int(declared) > get_settings().max_image_bytes + 256 * 1024:
+                    # No endpoint accepts a body this large; refuse before reading it.
+                    raise _TooLarge
                 response = await asyncio.wait_for(call_next(request),
                                                   get_settings().request_timeout_seconds)
+            except _TooLarge:
+                response = JSONResponse(error_body("payload_too_large", "Dữ liệu gửi lên quá lớn."),
+                                        status_code=413)
             except TimeoutError:
                 response = JSONResponse(error_body("timeout", "Yêu cầu xử lý quá lâu, vui lòng thử lại."),
                                         status_code=504)
@@ -51,6 +62,9 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
             return await call_next(request)
         key = request.headers.get("authorization") or (request.client.host if request.client else "?")
         now = time.monotonic()
+        if len(self._hits) > 5000:   # bound memory: forget keys with no recent activity
+            self._hits = defaultdict(deque, {k: v for k, v in self._hits.items()
+                                             if v and now - v[-1] <= 60})
         window = self._hits[key]
         while window and now - window[0] > 60:
             window.popleft()

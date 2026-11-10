@@ -29,8 +29,12 @@ async def lifespan(_: FastAPI):
 
 
 def create_app() -> FastAPI:
+    production = get_settings().env == "production"
     app = FastAPI(title="DealMate API", version=__version__, lifespan=lifespan,
-                  description="Tìm giá mua thực tế thấp nhất cho đúng sản phẩm.")
+                  description="Tìm giá mua thực tế thấp nhất cho đúng sản phẩm.",
+                  # The interactive docs describe private endpoints: off in production.
+                  docs_url=None if production else "/docs", redoc_url=None,
+                  openapi_url=None if production else "/openapi.json")
     app.add_middleware(RateLimitMiddleware)
     app.add_middleware(RequestContextMiddleware)   # outermost: sets the request id first
     install_error_handlers(app)

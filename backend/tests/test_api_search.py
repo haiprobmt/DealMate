@@ -238,3 +238,18 @@ async def test_image_upload_validation(client, fake_llm):
     r = await client.post("/api/v1/search/image", files={"image": ("a.png", io.BytesIO(b""), "image/png")})
     assert r.status_code == 422
     assert fake_llm.calls == [], "invalid uploads never reach the AI"
+
+
+async def test_combo_is_a_pack_filter_but_n_bottles_is_a_purchase_quantity(client):
+    combo = await search(client, "combo 2 sữa chống nắng Anessa Perfect UV Skincare Milk 60ml")
+    assert combo["groups"][0]["title"].endswith("(combo 2)") and combo["groups"][0]["offers"][0]["price"]["quantity"] == 1
+    assert all(g["attributes"]["pack_quantity"] == 2 for g in combo["groups"] if g["match"]["match_type"] == "exact")
+    two = await search(client, "mua 2 túi nước giặt Ariel Matic cửa trước 3.6kg")
+    offer = two["groups"][0]["offers"][0]
+    assert offer["price"]["quantity"] == 2 and two["groups"][0]["attributes"]["pack_quantity"] is None
+
+
+async def test_oversized_request_is_rejected_before_processing(client):
+    r = await client.post("/api/v1/search", content=b"x" * (6 * 1024 * 1024),
+                          headers={"content-type": "application/json"})
+    assert r.status_code == 413 and r.json()["error"]["code"] == "payload_too_large"

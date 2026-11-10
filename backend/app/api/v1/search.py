@@ -1,4 +1,6 @@
 import asyncio
+import re
+from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, File, Form, UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -29,8 +31,10 @@ from app.schemas.api import (
 from app.schemas.domain import MARKETPLACE_NAMES, ProductQuery
 from app.services.search import run_search
 from app.services.url_parser import parse_marketplace_url
+from app.utils.text import fold
 
 router = APIRouter(prefix="/search", tags=["search"])
+_PACK_WORDS = re.compile(r"\b(combo|set|bo)\s*\d|(?:^|\s)x\s?\d")
 
 
 @router.post("", response_model=SearchResponse)
@@ -39,10 +43,13 @@ async def search_text(body: SearchRequest, user: User = Depends(current_user),
                       registry: ConnectorRegistry = Depends(registry_dep),
                       llm: StructuredLLM | None = Depends(llm_dep)) -> SearchResponse:
     query, interpreter, notes = await interpret(body.query, llm)
-    if query.quantity and body.quantity == 1:
-        body.quantity = min(query.quantity, 20)
-    # "mua 2 chai": quantity is how many to buy, not a pack-size filter on listings.
-    query_for_match = query.model_copy(update={"quantity": None})
+    query_for_match = query
+    if query.quantity and not _PACK_WORDS.search(fold(body.query)):
+        # "mua 2 chai" = buy two single items: price them as quantity 2, do not filter by pack size.
+        # "combo 2" / "x2" stays a pack-size requirement on the listing itself.
+        if body.quantity == 1:
+            body.quantity = min(query.quantity, 20)
+        query_for_match = query.model_copy(update={"quantity": None})
     return await run_search(
         session, user_id=user.id, registry=registry, llm=llm, query=query_for_match, raw_text=body.query,
         search_type="text", interpreter=interpreter, notes=notes, marketplaces=body.marketplaces,
@@ -76,7 +83,6 @@ async def search_image(image: UploadFile = File(...), hint: str | None = Form(de
         search = Search(user_id=user.id, search_type="image", query=label, spec={}, result_count=0)
         session.add(search)
         await session.commit()
-        from datetime import UTC, datetime
         message = ("Ảnh không giống một sản phẩm. Hãy thử ảnh khác hoặc nhập tên sản phẩm."
                    if not ident.is_product else
                    "Chưa đủ chắc chắn về sản phẩm trong ảnh. Chọn một gợi ý hoặc nhập tên sản phẩm.")

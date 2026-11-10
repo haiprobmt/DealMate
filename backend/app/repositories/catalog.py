@@ -82,12 +82,14 @@ async def find_or_create_variant(session: AsyncSession, attrs: ProductAttributes
                 model=attrs.model, image_url=image_url)
         .on_conflict_do_update(index_elements=["product_key"], set_={"product_key": pkey})
         .returning(Product.id))).scalar_one()
-    variant = ProductVariant(product_id=product_id, variant_key=key, title=title,
-                             attributes=attrs.model_dump(mode="json"), gtin=attrs.gtin,
-                             image_url=image_url, search_query=search_query[:300])
-    session.add(variant)
-    await session.flush()
-    return variant
+    # Upsert: two concurrent searches may discover the same new variant.
+    return (await session.execute(
+        pg_insert(ProductVariant)
+        .values(product_id=product_id, variant_key=key, title=title,
+                attributes=attrs.model_dump(mode="json"), gtin=attrs.gtin, image_url=image_url,
+                search_query=search_query[:300])
+        .on_conflict_do_update(index_elements=["variant_key"], set_={"variant_key": key})
+        .returning(ProductVariant), execution_options={"populate_existing": True})).scalar_one()
 
 
 async def upsert_offer(session: AsyncSession, variant_id: int, raw: RawOffer, price: PriceBreakdown,

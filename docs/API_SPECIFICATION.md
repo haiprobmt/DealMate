@@ -1,7 +1,7 @@
 # API Specification (v1)
 
 Machine-readable contract: [`openapi.json`](openapi.json) (generated from the code; also served at
-`/docs` and `/openapi.json` on a running server). Schemas live in `backend/app/schemas/api.py`.
+`/docs` and `/openapi.json` when `DEALMATE_ENV` is not `production`). Schemas live in `backend/app/schemas/api.py`.
 
 ## Conventions
 * Base path `/api/v1`. JSON, UTF-8. Money = integer VND. Timestamps = ISO-8601 UTC.
@@ -17,7 +17,7 @@ Machine-readable contract: [`openapi.json`](openapi.json) (generated from the co
   |------|-----------------|
   | 401 | `unauthorized` |
   | 404 | `not_found` |
-  | 413 / 415 | `image_too_large` / `unsupported_image` |
+  | 413 / 415 | `image_too_large`, `payload_too_large` / `unsupported_image` |
   | 422 | `validation_error`, `invalid_url`, `unsupported_marketplace`, `short_link_unsupported`, `url_unresolvable` |
   | 429 | `rate_limited` (+ `Retry-After`) |
   | 503 | `ai_unavailable`, `db_unavailable` |
