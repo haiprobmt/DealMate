@@ -4,7 +4,7 @@
 | Milestone | Status | Notes |
 |---|---|---|
 | 0 — Inspection & planning | Done | Empty repo; toolchain installed; constraints recorded in SYSTEM_ARCHITECTURE.md |
-| 1 — Foundation | Done | FastAPI, PostgreSQL, Alembic, Docker Compose, health check, CI workflow (backend + e2e jobs green on GitHub) |
+| 1 — Foundation | Done | FastAPI, PostgreSQL, Alembic, Docker Compose, health check, CI workflow (all three jobs green on GitHub) |
 | 2 — Android UI | Done (build + 140 JVM/Robolectric tests + screenshots) | Not run on a device/emulator |
 | 3 — Backend search engine | Done | Orchestration, interpreter, connectors, normalization, matching, pricing, ranking — all tested |
 | 4 — Marketplace integration | **Blocked on credentials** | Shopee Affiliate connector written but unverified; Lazada/TikTok not integrated; URL search implemented |
@@ -26,7 +26,7 @@
 6. Harvest real listing titles into the matching dataset (with a held-out split); extend the brand
    lexicon (consider moving it to a data file / DB table).
 7. Firebase project + service account → verify FCM push end to end.
-8. Run CI on GitHub; add an instrumented (emulator) smoke test job.
+8. Add an instrumented (emulator) smoke test job to CI.
 
 ## Later ideas
 * "Find a cheaper alternative" across brands (may justify embeddings/pgvector).

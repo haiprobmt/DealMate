@@ -41,8 +41,7 @@ development; everything else is called out as unverified.
 | Android `lintDebug` | 0 errors, 40 warnings (mostly "newer dependency version available") |
 | Android `assembleDebug` / `assembleRelease` (R8) | both succeed; release APK signed and `apksigner verify` passes |
 | `ruff check` | clean |
-| GitHub Actions: `backend` and `e2e` jobs | **passed** on GitHub runners (the e2e job builds and runs the committed Docker stack unmodified) |
-| GitHub Actions: `android` job | see the Actions tab — first runs failed in an SDK-setup step that has since been removed |
+| GitHub Actions (`backend`, `e2e`, `android` jobs) | **all passed** on GitHub runners; the e2e job builds and runs the committed Docker stack unmodified, the android job runs the tests, lint and debug build and uploads the APK |
 
 Inside the development sandbox the Docker stack needed two local-only workarounds (proxy CA
 during `pip install`, database addressed by IP). The committed configuration itself was then
