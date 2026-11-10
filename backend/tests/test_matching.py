@@ -102,3 +102,12 @@ def test_vague_listing_detection():
     assert is_vaguer_description(vague, specific)
     assert not is_vaguer_description(specific, vague)
     assert not is_vaguer_description(n("Anessa Perfect UV Skincare Milk 60ml"), n("Anessa Perfect UV Skincare Milk 20ml"))
+
+
+def test_unrequested_combo_and_line_modifier_are_not_exact():
+    specific = "Anessa Perfect UV Skincare Milk 60ml"
+    assert mq(specific, "Combo 2 sữa chống nắng Anessa Perfect UV Skincare Milk 60ml").match_type == MatchType.SIMILAR
+    assert mq(specific, "Anessa Perfect UV Sunscreen Mild Milk 60ml").match_type == MatchType.SIMILAR
+    assert mq("combo 2 " + specific, "Combo 2 sữa chống nắng Anessa Perfect UV Skincare Milk 60ml").match_type == MatchType.EXACT
+    # A generic request does not name a line, so the Mild version still satisfies it.
+    assert mq("kem chống nắng Anessa 60ml", "Anessa Perfect UV Sunscreen Mild Milk 60ml").match_type == MatchType.EXACT

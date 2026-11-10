@@ -185,6 +185,15 @@ def match_query(query: ProductAttributes, listing: ProductAttributes,
             c.different.append("pack_quantity")
         else:
             c.matched.append("pack_quantity")
+    elif (listing.pack_quantity or 1) > 1:
+        # The user asked for the item, not a multi-pack: a combo is a different purchase.
+        c.different.append("pack_quantity")
+    # The user named a specific line ("Perfect UV Skincare Milk"); a listing carrying an extra
+    # line modifier (Mild, Brightening...) is a different line, not the one asked for.
+    if query.product_line:
+        for key in BASE_DEFAULT_TRAITS:
+            if key in listing.traits and key not in query.traits:
+                c.different.append(f"trait:{key}")
     # The user asked for a volume but the listing states a weight (or vice versa): a different
     # number means a different size; the same number ("60ml" vs "60g") stays unknown.
     for asked, other in (("volume_ml", "weight_g"), ("weight_g", "volume_ml")):
