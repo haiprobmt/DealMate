@@ -41,12 +41,12 @@ development; everything else is called out as unverified.
 | Android `lintDebug` | 0 errors, 40 warnings (mostly "newer dependency version available") |
 | Android `assembleDebug` / `assembleRelease` (R8) | both succeed; release APK signed and `apksigner verify` passes |
 | `ruff check` | clean |
-| GitHub Actions workflow | defined, **not yet observed running** |
+| GitHub Actions: `backend` and `e2e` jobs | **passed** on GitHub runners (the e2e job builds and runs the committed Docker stack unmodified) |
+| GitHub Actions: `android` job | see the Actions tab — first runs failed in an SDK-setup step that has since been removed |
 
-Two things were needed only inside the development sandbox to run the Docker stack and are *not*
-in the repository: trusting the sandbox's TLS-inspecting proxy during `pip install`, and addressing
-the database by IP because container DNS did not work there. On a normal Docker host the committed
-files are expected to work as-is, but that exact configuration was not the one executed.
+Inside the development sandbox the Docker stack needed two local-only workarounds (proxy CA
+during `pip install`, database addressed by IP). The committed configuration itself was then
+confirmed by the GitHub `e2e` job, which builds and runs it unmodified.
 
 ## Marketplace integrations verified
 **None.** See MARKETPLACE_INTEGRATION.md.

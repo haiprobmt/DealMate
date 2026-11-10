@@ -73,7 +73,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
-      - uses: android-actions/setup-android@v3
+      # ubuntu-latest runners ship the Android SDK (ANDROID_HOME); Gradle fetches any missing platform.
       - uses: gradle/actions/setup-gradle@v4
       - name: Unit, Robolectric UI and screenshot tests
         run: ./gradlew :app:testDebugUnitTest --stacktrace
