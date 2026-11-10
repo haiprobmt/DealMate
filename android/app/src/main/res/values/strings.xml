@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">DealMate</string>
+    <string name="action_back">Quay lại</string>
+    <string name="action_cancel">Hủy</string>
+    <string name="action_clear">Xóa</string>
+    <string name="action_open_settings">Mở Cài đặt</string>
+    <string name="action_paste">Dán từ bộ nhớ tạm</string>
+    <string name="action_retry">Thử lại</string>
+    <string name="action_save">Lưu</string>
+    <string name="action_understood">Đã hiểu</string>
+    <string name="action_undo">Hoàn tác</string>
+    <string name="tab_home">Trang chủ</string>
+    <string name="tab_explore">Khám phá</string>
+    <string name="tab_wishlist">Yêu thích</string>
+    <string name="tab_history">Lịch sử</string>
+    <string name="tab_settings">Cài đặt</string>
+    <string name="demo_banner">Chế độ demo — dữ liệu mẫu, không phải giá thật</string>
+    <string name="demo_tag">DEMO</string>
+    <string name="time_just_now">vừa xong</string>
+    <string name="error_title">Có lỗi xảy ra</string>
+    <string name="error_not_configured">Hãy nhập địa chỉ máy chủ và mã truy cập trong Cài đặt để bắt đầu.</string>
+    <string name="error_unauthorized">Mã truy cập không hợp lệ. Hãy kiểm tra lại trong Cài đặt.</string>
+    <string name="error_offline">Không kết nối được máy chủ. Hãy kiểm tra mạng rồi thử lại.</string>
+    <string name="error_timeout">Máy chủ phản hồi quá lâu. Hãy thử lại sau ít phút.</string>
+    <string name="error_rate_limited">Bạn thao tác quá nhanh. Hãy chờ một lát rồi thử lại.</string>
+    <string name="error_unavailable">Dịch vụ tạm thời chưa sẵn sàng. Hãy thử lại sau.</string>
+    <string name="error_not_found">Không tìm thấy dữ liệu được yêu cầu.</string>
+    <string name="error_validation">Yêu cầu không hợp lệ. Hãy kiểm tra lại nội dung nhập.</string>
+    <string name="error_server">Máy chủ gặp lỗi. Hãy thử lại sau.</string>
+    <string name="error_unknown">Đã xảy ra lỗi không xác định.</string>
+    <string name="error_image_unreadable">Không đọc được ảnh này. Hãy chọn ảnh khác (JPEG, PNG hoặc WebP).</string>
+    <string name="not_configured_title">Chưa kết nối máy chủ</string>
+    <string name="not_configured_message">Nhập địa chỉ máy chủ và mã truy cập để tìm giá.</string>
+    <string name="confidence_verified">Đã xác minh</string>
+    <string name="confidence_estimated">Ước tính</string>
+    <string name="confidence_incomplete">Thiếu phí vận chuyển</string>
+    <string name="confidence_unknown">Chưa rõ độ tin cậy</string>
+    <string name="match_exact">Đúng sản phẩm</string>
+    <string name="match_likely">Có thể đúng — thiếu thông tin</string>
+    <string name="match_similar">Sản phẩm tương tự</string>
+    <string name="match_different">Sản phẩm khác</string>
+    <string name="match_unknown">Chưa rõ mức độ khớp</string>
+    <string name="sort_price">Giá cuối thấp nhất</string>
+    <string name="sort_rating">Đánh giá cao nhất</string>
+    <string name="source_ok">Hoạt động</string>
+    <string name="source_timeout">Hết thời gian chờ</string>
+    <string name="source_error">Lỗi</string>
+    <string name="source_not_configured">Chưa cấu hình</string>
+    <string name="source_not_implemented">Chưa hỗ trợ</string>
+    <string name="source_skipped">Bỏ qua</string>
+    <string name="source_unknown">Không rõ</string>
+    <string name="source_mock">Dữ liệu mẫu</string>
+    <string name="source_live">Dữ liệu thật</string>
+    <string name="source_verified_live">Đã kiểm chứng với API thật</string>
+    <string name="source_not_verified_live">Chưa kiểm chứng với API thật</string>
+    <string name="query_size">Size %1$s</string>
+    <string name="query_count">%1$d miếng</string>
+    <string name="query_quantity">x%1$d</string>
+    <string name="query_max_price">Tối đa %1$s</string>
+    <string name="query_min_price">Từ %1$s</string>
+    <string name="price_excludes_shipping">Chưa gồm phí vận chuyển</string>
+    <string name="price_from_excl_shipping">%1$s · chưa gồm phí vận chuyển</string>
+    <string name="breakdown_listed">Giá niêm yết</string>
+    <string name="breakdown_listed_qty">Giá niêm yết × %1$d</string>
+    <string name="breakdown_voucher">Giảm giá voucher</string>
+    <string name="breakdown_shipping">Phí vận chuyển</string>
+    <string name="breakdown_shipping_unknown">Chưa rõ</string>
+    <string name="breakdown_shipping_free">Miễn phí</string>
+    <string name="breakdown_shipping_estimated">%1$s (ước tính)</string>
+    <string name="breakdown_fees">Phí bắt buộc khác</string>
+    <string name="breakdown_final">Giá cuối</string>
+    <string name="breakdown_known_subtotal">Tạm tính (phần đã biết)</string>
+    <string name="breakdown_no_final">Chưa có giá cuối vì thiếu phí vận chuyển. Con số trên không dùng để so sánh rẻ nhất.</string>
+    <string name="breakdown_skipped_vouchers">Voucher không áp dụng</string>
+    <string name="voucher_platform">Voucher sàn</string>
+    <string name="voucher_store">Voucher shop</string>
+    <string name="voucher_estimated">ước tính</string>
+    <string name="seller_unknown">Người bán chưa rõ</string>
+    <string name="seller_official_label">Gian hàng Mall/Official — nhãn do %1$s gắn</string>
+    <string name="offer_best_verified">Rẻ nhất · giá đã xác minh</string>
+    <string name="offer_best_estimated">Rẻ nhất · giá ước tính</string>
+    <string name="offer_show_calculation">Cách tính giá</string>
+    <string name="offer_open_listing">Mở trang gốc</string>
+    <string name="offer_sold">Đã bán %1$s</string>
+    <string name="offer_out_of_stock">Hết hàng</string>
+    <string name="offer_over_budget">Vượt ngân sách</string>
+    <string name="offer_retrieved">Cập nhật %1$s</string>
+    <string name="offer_stale">dữ liệu cũ, giá có thể đã đổi</string>
+    <string name="sample_dialog_title">Dữ liệu mẫu</string>
+    <string name="sample_dialog_message">Đây là tin đăng mẫu của chế độ demo nên không có trang gốc để mở. Giá và người bán hiển thị không phải dữ liệu thật.</string>
+    <string name="cannot_open_title">Không mở được liên kết</string>
+    <string name="cannot_open_message">Liên kết của tin đăng không hợp lệ hoặc thiết bị không có ứng dụng để mở.</string>
+    <string name="method_text">Văn bản</string>
+    <string name="method_image">Hình ảnh</string>
+    <string name="method_url">Link</string>
+    <string name="image_selected">Ảnh đã chọn</string>
+    <string name="image_pick_gallery">Chọn ảnh</string>
+    <string name="image_take_photo">Chụp ảnh</string>
+    <string name="image_camera_denied">Chưa được cấp quyền máy ảnh. Bạn vẫn có thể chọn ảnh có sẵn.</string>
+    <string name="wishlist_save">Lưu yêu thích</string>
+    <string name="wishlist_saved">Đã lưu</string>
+    <string name="wishlist_added">Đã lưu vào danh sách yêu thích</string>
+    <string name="wishlist_removed">Đã xóa khỏi danh sách yêu thích</string>
+    <string name="wishlist_remove">Xóa khỏi yêu thích</string>
+    <string name="wishlist_empty_title">Chưa có sản phẩm yêu thích</string>
+    <string name="wishlist_empty_message">Lưu sản phẩm từ trang chi tiết để theo dõi giá và nhận báo khi giá giảm.</string>
+    <string name="wishlist_empty_action">Tìm sản phẩm</string>
+    <string name="wishlist_offline">Đang ngoại tuyến — hiển thị dữ liệu đã lưu trên máy</string>
+    <string name="wishlist_price_down">Giảm %1$s so với %2$s</string>
+    <string name="wishlist_price_up">Tăng %1$s so với %2$s</string>
+    <string name="wishlist_no_price">Chưa có giá cuối</string>
+    <string name="wishlist_checked">Kiểm tra %1$s</string>
+    <string name="wishlist_not_checked">Chưa kiểm tra giá</string>
+    <string name="target_set">Đặt giá mong muốn</string>
+    <string name="target_value">Báo khi ≤ %1$s</string>
+    <string name="target_saved">Đã lưu giá mong muốn</string>
+    <string name="target_cleared">Đã bỏ giá mong muốn</string>
+    <string name="target_dialog_title_add">Lưu và đặt giá mong muốn</string>
+    <string name="target_dialog_title_edit">Giá mong muốn</string>
+    <string name="target_dialog_message">Bạn sẽ được báo khi giá cuối thấp nhất xuống bằng hoặc dưới mức này.</string>
+    <string name="target_dialog_reference">Giá thấp nhất hiện tại: %1$s</string>
+    <string name="target_dialog_label">Giá mong muốn</string>
+    <string name="target_dialog_invalid">Số tiền không hợp lệ</string>
+    <string name="target_dialog_empty_hint">Để trống nếu không cần báo giá</string>
+    <string name="home_tagline">Giá mua thực rẻ nhất cho đúng sản phẩm bạn cần</string>
+    <string name="home_search_placeholder">Bạn muốn tìm sản phẩm gì?</string>
+    <string name="home_url_placeholder">Dán link sản phẩm</string>
+    <string name="home_url_help">Dán link sản phẩm từ Shopee, Lazada hoặc TikTok Shop để so giá đúng sản phẩm đó.</string>
+    <string name="home_image_hint_label">Gợi ý thêm (không bắt buộc)</string>
+    <string name="home_image_help">Ảnh được thu nhỏ và nén trước khi gửi lên máy chủ của bạn.</string>
+    <string name="home_search_button">Tìm giá rẻ nhất</string>
+    <string name="home_examples_title">Thử tìm</string>
+    <string name="home_categories_title">Danh mục</string>
+    <string name="home_recent_searches">Tìm kiếm gần đây</string>
+    <string name="home_recently_viewed">Đã xem gần đây</string>
+    <string name="home_wishlist_title">Danh sách yêu thích</string>
+    <string name="home_wishlist_subtitle">Theo dõi giá và giá mong muốn</string>
+    <string name="results_title">Kết quả</string>
+    <string name="results_loading">Đang tìm và so giá trên các sàn…</string>
+    <string name="results_loading_image">Đang nhận diện sản phẩm trong ảnh…</string>
+    <string name="results_offline">Đang ngoại tuyến — kết quả đã lưu, giá có thể đã thay đổi</string>
+    <string name="results_offline_saved">Đang ngoại tuyến — kết quả đã lưu %1$s, giá có thể đã thay đổi</string>
+    <string name="results_understood_rules">Hiểu là</string>
+    <string name="results_understood_ai">AI hiểu là</string>
+    <string name="results_understood_none">chưa nhận ra thuộc tính cụ thể</string>
+    <string name="results_partial">Một số sàn không phản hồi. Kết quả có thể chưa đầy đủ.</string>
+    <string name="results_partial_named">Chưa có dữ liệu từ %1$s. Kết quả có thể chưa đầy đủ.</string>
+    <string name="results_best_hidden">Bộ lọc đang ẩn ưu đãi rẻ nhất.</string>
+    <string name="results_no_best">Chưa xác định được giá rẻ nhất vì các ưu đãi đều thiếu phí vận chuyển.</string>
+    <string name="results_empty_title">Không tìm thấy sản phẩm phù hợp</string>
+    <string name="results_empty_message">Hãy thử mô tả rõ hơn: thương hiệu, dung tích hoặc kích cỡ.</string>
+    <string name="results_filtered_title">Không còn kết quả sau khi lọc</string>
+    <string name="results_filtered_message">Hãy nới lỏng hoặc đặt lại bộ lọc.</string>
+    <string name="results_likely_subtitle">Tin đăng thiếu một số thông tin nên chưa thể khẳng định</string>
+    <string name="results_similar_title">Sản phẩm tương tự</string>
+    <string name="results_similar_subtitle">Khác phiên bản, dung tích hoặc mẫu — không tính vào giá rẻ nhất</string>
+    <string name="best_title">Rẻ nhất cho đúng sản phẩm</string>
+    <string name="best_at_marketplace">tại %1$s</string>
+    <string name="best_view_detail">Xem so sánh giá</string>
+    <string name="clarification_title">Cần làm rõ thêm</string>
+    <string name="filter_title">Lọc và sắp xếp</string>
+    <string name="filter_reset">Đặt lại</string>
+    <string name="filter_sort">Sắp xếp</string>
+    <string name="filter_sort_price_note">Giá đã xác minh luôn xếp trước giá ước tính; ưu đãi thiếu phí vận chuyển xếp cuối.</string>
+    <string name="filter_marketplace">Sàn</string>
+    <string name="filter_match">Mức độ khớp</string>
+    <string name="filter_hide_over_budget">Ẩn ưu đãi vượt ngân sách</string>
+    <string name="filter_done">Xem kết quả</string>
+    <string name="product_title">Chi tiết sản phẩm</string>
+    <string name="product_offers_title">So sánh giá hiện tại</string>
+    <string name="product_no_offers_title">Chưa có ưu đãi</string>
+    <string name="product_no_offers_message">Hiện chưa có tin đăng nào cho phiên bản này.</string>
+    <string name="history_chart_title">Lịch sử giá thấp nhất</string>
+    <string name="history_chart_caption">Giá ghi nhận ở các lần kiểm tra trước — không phải ưu đãi hiện tại</string>
+    <string name="history_chart_empty">Chưa đủ dữ liệu để vẽ lịch sử giá.</string>
+    <string name="history_chart_max">Cao nhất %1$s</string>
+    <string name="history_chart_min">Thấp nhất %1$s</string>
+    <string name="assistant_title">Trợ lý DealMate</string>
+    <string name="assistant_subtitle">Trả lời dựa trên dữ liệu ưu đãi đã lấy về, không tự suy đoán giá.</string>
+    <string name="assistant_placeholder">Hỏi về các ưu đãi này…</string>
+    <string name="assistant_send">Gửi câu hỏi</string>
+    <string name="assistant_loading">Đang phân tích dữ liệu…</string>
+    <string name="assistant_by_ai">Trả lời bởi AI</string>
+    <string name="assistant_by_rules">Trả lời theo quy tắc (không dùng AI)</string>
+    <string name="assistant_facts">Dữ liệu làm căn cứ</string>
+    <string name="history_searches">Tìm kiếm</string>
+    <string name="history_viewed">Sản phẩm đã xem</string>
+    <string name="history_image_search">Tìm bằng hình ảnh</string>
+    <string name="history_lowest">Thấp nhất %1$s</string>
+    <string name="history_empty_title">Chưa có lịch sử</string>
+    <string name="history_empty_message">Các lượt tìm kiếm và sản phẩm đã xem sẽ xuất hiện ở đây.</string>
+    <string name="history_clear_title">Xóa lịch sử</string>
+    <string name="history_clear_message">Xóa toàn bộ lịch sử tìm kiếm và sản phẩm đã xem trên máy chủ và trên máy này? Không thể hoàn tác.</string>
+    <string name="history_clear_confirm">Xóa tất cả</string>
+    <string name="history_cleared">Đã xóa lịch sử</string>
+    <string name="explore_all_categories">Tất cả</string>
+    <string name="explore_empty_title">Chưa có dữ liệu để khám phá</string>
+    <string name="explore_empty_message">Chưa ghi nhận lượt giảm giá nào.</string>
+    <string name="explore_price_drops">Vừa giảm giá</string>
+    <string name="explore_price_drops_subtitle">Chỉ gồm lượt giảm giá đã được ghi nhận</string>
+    <string name="explore_recently_seen">Sản phẩm đã ghi nhận gần đây</string>
+    <string name="explore_recently_seen_subtitle">Từ các lượt tìm kiếm trước</string>
+    <string name="explore_drop_amount">Giảm %1$s</string>
+    <string name="settings_server">Máy chủ</string>
+    <string name="settings_server_url">Địa chỉ máy chủ</string>
+    <string name="settings_token">Mã truy cập</string>
+    <string name="settings_token_toggle">Hiện hoặc ẩn mã truy cập</string>
+    <string name="settings_token_note">Mã truy cập được mã hóa bằng Android Keystore và không nằm trong bản sao lưu.</string>
+    <string name="settings_check_connection">Kiểm tra kết nối</string>
+    <string name="settings_connected">Đã kết nối: %1$s · máy chủ phiên bản %2$s</string>
+    <string name="settings_connected_demo">Máy chủ đang ở chế độ demo (dữ liệu mẫu).</string>
+    <string name="settings_connection_failed">Không kết nối được máy chủ</string>
+    <string name="settings_connection_token_failed">Máy chủ hoạt động nhưng mã truy cập không được chấp nhận</string>
+    <string name="settings_language">Ngôn ngữ</string>
+    <string name="language_vi">Tiếng Việt</string>
+    <string name="language_en">English</string>
+    <string name="settings_search">Tìm kiếm</string>
+    <string name="settings_marketplaces">Sàn ưu tiên khi tìm</string>
+    <string name="settings_default_sort">Sắp xếp mặc định</string>
+    <string name="settings_notifications">Thông báo</string>
+    <string name="settings_notifications_toggle">Báo khi giá giảm</string>
+    <string name="settings_notifications_note">Ứng dụng kiểm tra thông báo từ máy chủ khoảng mỗi giờ khi có mạng.</string>
+    <string name="settings_notifications_denied">Chưa được cấp quyền thông báo. Hãy cho phép trong cài đặt hệ thống rồi bật lại.</string>
+    <string name="settings_push_app_on">Push (FCM) đã được cấu hình trong bản dựng này.</string>
+    <string name="settings_push_app_off">Push (FCM) chưa được cấu hình trong bản dựng này — thông báo vẫn đến qua kiểm tra định kỳ.</string>
+    <string name="settings_location">Địa chỉ giao hàng</string>
+    <string name="settings_location_label">Khu vực giao hàng mặc định</string>
+    <string name="settings_location_note">Chỉ lưu trên máy này. Phí vận chuyển hiển thị lấy từ dữ liệu của các sàn, ứng dụng không tự tính theo địa chỉ.</string>
+    <string name="settings_sources">Trạng thái nguồn dữ liệu</string>
+    <string name="settings_sources_loading">Đang kiểm tra nguồn dữ liệu…</string>
+    <string name="settings_sources_unknown">Kết nối máy chủ để xem trạng thái các sàn.</string>
+    <string name="settings_ai">AI</string>
+    <string name="settings_ai_on">Sẵn sàng</string>
+    <string name="settings_ai_on_model">Sẵn sàng (%1$s)</string>
+    <string name="settings_ai_off">Chưa cấu hình</string>
+    <string name="settings_push_server">Push trên máy chủ</string>
+    <string name="settings_configured">Đã cấu hình</string>
+    <string name="settings_not_configured">Chưa cấu hình</string>
+    <string name="settings_price_check">Chu kỳ kiểm tra giá</string>
+    <string name="settings_price_check_value">%1$d phút</string>
+    <string name="settings_about">Giới thiệu</string>
+    <string name="settings_version">DealMate %1$s</string>
+    <string name="settings_about_text">DealMate tìm giá mua thực thấp nhất cho đúng sản phẩm trên Shopee, Lazada và TikTok Shop. Ứng dụng chỉ hiển thị dữ liệu do máy chủ của bạn cung cấp và không tự khẳng định hàng chính hãng.</string>
+    <string name="notification_channel_name">Báo giá giảm</string>
+    <string name="notification_channel_description">Thông báo khi sản phẩm yêu thích giảm tới giá mong muốn</string>
+    <string name="notification_demo_prefix">[DEMO] %1$s</string>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d phút trước</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d giờ trước</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d ngày trước</item>
+    </plurals>
+    <plurals name="offer_count">
+        <item quantity="other">%1$d ưu đãi</item>
+    </plurals>
+    <plurals name="product_offers_subtitle">
+        <item quantity="other">%1$d ưu đãi, theo thứ tự máy chủ trả về</item>
+    </plurals>
+    <plurals name="results_empty_excluded">
+        <item quantity="other">Đã loại %1$d tin đăng vì không cùng sản phẩm.</item>
+    </plurals>
+    <plurals name="results_excluded">
+        <item quantity="other">Đã loại %1$d tin đăng không cùng sản phẩm.</item>
+    </plurals>
+    <plurals name="history_result_count">
+        <item quantity="other">%1$d kết quả</item>
+    </plurals>
+    <!-- Search phrases / questions sent as-is to the (Vietnamese) backend: not translated. -->
+    <string-array name="home_example_queries" translatable="false">
+        <item>Tìm kem chống nắng Anessa 60ml giá rẻ nhất</item>
+        <item>Tìm máy sấy tóc Dyson dưới 8 triệu</item>
+        <item>Tìm bỉm Merries size L</item>
+        <item>Tìm nước giặt Ariel 3.6kg</item>
+    </string-array>
+    <string-array name="home_categories" translatable="false">
+        <item>Chống nắng</item>
+        <item>Tã bỉm</item>
+        <item>Nước giặt</item>
+        <item>Điện thoại</item>
+        <item>Máy sấy tóc</item>
+        <item>Nồi chiên</item>
+    </string-array>
+    <string-array name="assistant_questions" translatable="false">
+        <item>Shop nào rẻ nhất?</item>
+        <item>Có đúng cùng sản phẩm không?</item>
+        <item>Vì sao giá chênh lệch?</item>
+        <item>Có phải giá tốt không?</item>
+    </string-array>
+</resources>

@@ -1,0 +1,51 @@
+{
+ "search_id": 502,
+ "search_type": "image",
+ "query": {
+  "raw": "",
+  "interpreter": "ai",
+  "spec": {
+   "brand": null,
+   "product_name": null,
+   "model": null,
+   "category": "sunscreen",
+   "variant": null,
+   "volume": null,
+   "weight": null,
+   "size": null,
+   "quantity": null,
+   "count": null,
+   "storage": null,
+   "color": null,
+   "max_price": null,
+   "min_price": null,
+   "currency": "VND",
+   "constraints": [],
+   "uncertain_fields": [
+    "brand",
+    "volume"
+   ],
+   "search_keywords": null
+  },
+  "notes": [
+   "Ảnh không đủ rõ để xác định dung tích."
+  ]
+ },
+ "demo_mode": false,
+ "partial": false,
+ "sources": [],
+ "best": null,
+ "groups": [],
+ "similar_groups": [],
+ "excluded_count": 0,
+ "over_budget_count": 0,
+ "clarification": {
+  "needed": true,
+  "message": "Chưa nhận ra chính xác sản phẩm trong ảnh. Bạn muốn tìm sản phẩm nào?",
+  "suggestions": [
+   "Anessa Perfect UV Milk 60ml",
+   "Anessa Perfect UV Gel 90g"
+  ]
+ },
+ "generated_at": "2026-01-15T10:01:00Z"
+}

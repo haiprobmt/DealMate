@@ -1,0 +1,39 @@
+{
+ "demo_mode": true,
+ "ai_available": false,
+ "ai_model": null,
+ "push_configured": false,
+ "price_check_interval_minutes": 360,
+ "sources": [
+  {
+   "marketplace": "shopee",
+   "marketplace_name": "Shopee",
+   "connector": "mock",
+   "is_mock": true,
+   "status": "available",
+   "verified_live": false,
+   "message": "Đang dùng dữ liệu mẫu.",
+   "checked_at": "2026-01-15T10:00:00Z"
+  },
+  {
+   "marketplace": "lazada",
+   "marketplace_name": "Lazada",
+   "connector": "lazada_open_platform",
+   "is_mock": false,
+   "status": "not_configured",
+   "verified_live": false,
+   "message": "Thiếu LAZADA_APP_KEY.",
+   "checked_at": "2026-01-15T10:00:00Z"
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "marketplace_name": "TikTok Shop",
+   "connector": "tiktok_shop_affiliate",
+   "is_mock": false,
+   "status": "not_implemented",
+   "verified_live": false,
+   "message": "Chưa có connector chính thức.",
+   "checked_at": "2026-01-15T10:00:00Z"
+  }
+ ]
+}

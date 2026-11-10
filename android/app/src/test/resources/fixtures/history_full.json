@@ -1,0 +1,54 @@
+{
+ "searches": [
+  {
+   "id": 501,
+   "search_type": "text",
+   "query": "Tìm kem chống nắng Anessa 60ml giá rẻ nhất",
+   "result_count": 5,
+   "lowest_price": 315000,
+   "created_at": "2026-01-15T10:00:00Z"
+  },
+  {
+   "id": 498,
+   "search_type": "url",
+   "query": "https://shopee.vn/may-say-toc-dyson-supersonic-hd15-i.123.456",
+   "result_count": 3,
+   "lowest_price": 7990000,
+   "created_at": "2026-01-15T07:20:00Z"
+  },
+  {
+   "id": 497,
+   "search_type": "image",
+   "query": "",
+   "result_count": 0,
+   "lowest_price": null,
+   "created_at": "2026-01-14T12:00:00Z"
+  },
+  {
+   "id": 490,
+   "search_type": "text",
+   "query": "Tìm nước giặt Ariel 3.6kg",
+   "result_count": 8,
+   "lowest_price": 189000,
+   "created_at": "2026-01-11T12:00:00Z"
+  }
+ ],
+ "viewed_products": [
+  {
+   "product_id": 1,
+   "variant_id": 11,
+   "title": "Kem chống nắng Anessa Perfect UV Sunscreen Skincare Milk SPF50+ PA++++ 60ml",
+   "image_url": null,
+   "lowest_final_price": 315000,
+   "viewed_at": "2026-01-15T10:02:00Z"
+  },
+  {
+   "product_id": 5,
+   "variant_id": 51,
+   "title": "Máy sấy tóc Dyson Supersonic HD15",
+   "image_url": null,
+   "lowest_final_price": null,
+   "viewed_at": "2026-01-15T07:25:00Z"
+  }
+ ]
+}

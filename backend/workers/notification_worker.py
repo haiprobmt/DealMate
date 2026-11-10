@@ -40,7 +40,7 @@ async def run_once(session: AsyncSession, sender: FcmSender) -> dict:
             try:
                 outcome = await sender.send(token, note.title, note.body, {
                     "notification_id": str(note.id), "variant_id": str(note.variant_id or ""),
-                    "url": note.url or ""})
+                    "url": note.url or "", "is_mock": "true" if note.is_mock else "false"})
             except Exception:
                 log.exception("push_error", extra={"notification_id": note.id})
                 outcome = "failed"

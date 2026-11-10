@@ -1,0 +1,28 @@
+{
+ "items": [
+  {
+   "id": 61,
+   "title": "Giá đã giảm tới mức bạn muốn",
+   "body": "Anessa Perfect UV Milk 60ml còn 299.000đ trên Shopee.",
+   "url": "https://shopee.demo.invalid/product/101",
+   "price": 299000,
+   "variant_id": 11,
+   "status": "pending",
+   "is_mock": true,
+   "created_at": "2026-01-15T09:30:00Z",
+   "read_at": null
+  },
+  {
+   "id": 62,
+   "title": "Nhắc kiểm tra giá",
+   "body": "Chưa lấy được giá mới cho Merries size L.",
+   "url": null,
+   "price": null,
+   "variant_id": null,
+   "status": "sent",
+   "is_mock": false,
+   "created_at": "2026-01-15T07:30:00Z",
+   "read_at": "2026-01-15T08:00:00Z"
+  }
+ ]
+}

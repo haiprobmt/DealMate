@@ -1,0 +1,186 @@
+{
+ "search_id": 503,
+ "search_type": "voice",
+ "query": {
+  "raw": "bỉm Merries size L",
+  "interpreter": "rules",
+  "spec": {
+   "brand": "Merries",
+   "product_name": null,
+   "model": null,
+   "category": null,
+   "variant": null,
+   "volume": null,
+   "weight": null,
+   "size": "L",
+   "quantity": null,
+   "count": null,
+   "storage": null,
+   "color": null,
+   "max_price": null,
+   "min_price": null,
+   "currency": "VND",
+   "constraints": [],
+   "uncertain_fields": [],
+   "search_keywords": null
+  }
+ },
+ "demo_mode": false,
+ "partial": false,
+ "sources": [
+  {
+   "marketplace": "sendo",
+   "marketplace_name": "Sendo",
+   "status": "degraded",
+   "is_mock": false
+  }
+ ],
+ "best": null,
+ "groups": [
+  {
+   "product_id": 7,
+   "variant_id": 71,
+   "title": "Tã quần Merries size L 44 miếng",
+   "attributes": {
+    "brand": "Merries",
+    "category": null,
+    "product_line": null,
+    "model": null,
+    "sku": null,
+    "gtin": null,
+    "volume_ml": null,
+    "weight_g": null,
+    "count": 44,
+    "pack_quantity": null,
+    "size": "L",
+    "storage_gb": null,
+    "color": null,
+    "condition": null,
+    "origin": null,
+    "traits": {}
+   },
+   "match": {
+    "match_type": "fuzzy",
+    "confidence": 0.5
+   },
+   "offers": [
+    {
+     "id": 201,
+     "marketplace": "sendo",
+     "marketplace_name": "Sendo",
+     "is_mock": false,
+     "title": "[DEMO] Sữa chống nắng Anessa Perfect UV Skincare Milk 60ml chính hãng",
+     "url": "https://www.sendo.vn/san-pham-201",
+     "image_url": null,
+     "seller": {
+      "name": "Mỹ phẩm Hana",
+      "rating": null,
+      "is_official_store": null,
+      "location": null
+     },
+     "price": {
+      "currency": "VND",
+      "quantity": 1,
+      "listed_price": 299000,
+      "subtotal": 299000,
+      "voucher_discount": 0,
+      "applied_vouchers": [],
+      "skipped_vouchers": [],
+      "shipping_fee": null,
+      "shipping_status": "pending",
+      "mandatory_fees": 0,
+      "final_price": 310000,
+      "known_subtotal": 299000,
+      "confidence": "guessed",
+      "notes": [
+       "Sàn không trả về phí vận chuyển cho tin đăng này."
+      ]
+     },
+     "original_price": null,
+     "match": {
+      "match_type": "fuzzy",
+      "confidence": 0.96,
+      "matched_attributes": [
+       "brand",
+       "product_line",
+       "volume_ml"
+      ],
+      "different_attributes": [],
+      "unknown_attributes": [],
+      "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+      "decided_by": "rules"
+     },
+     "rating": 4.5,
+     "rating_count": 96,
+     "sold_count": 310,
+     "in_stock": true,
+     "retrieved_at": "2026-01-13T08:00:00.123456Z",
+     "is_stale": true,
+     "over_budget": false,
+     "new_field_from_future": {
+      "a": 1
+     }
+    },
+    {
+     "id": 202,
+     "marketplace": "shopee",
+     "marketplace_name": "Shopee",
+     "is_mock": false,
+     "title": "[DEMO] Sữa chống nắng Anessa Perfect UV Skincare Milk 60ml chính hãng",
+     "url": "https://shopee.vn/product/202",
+     "image_url": null,
+     "seller": {
+      "name": "Mỹ phẩm Hana",
+      "rating": null,
+      "is_official_store": null,
+      "location": null
+     },
+     "price": {
+      "currency": "VND",
+      "quantity": 1,
+      "listed_price": 299000,
+      "subtotal": 299000,
+      "voucher_discount": 0,
+      "applied_vouchers": [],
+      "skipped_vouchers": [],
+      "shipping_fee": null,
+      "shipping_status": "unknown",
+      "mandatory_fees": 0,
+      "final_price": null,
+      "known_subtotal": 299000,
+      "confidence": "incomplete",
+      "notes": [
+       "Sàn không trả về phí vận chuyển cho tin đăng này."
+      ]
+     },
+     "original_price": null,
+     "match": {
+      "match_type": "exact",
+      "confidence": 0.96,
+      "matched_attributes": [
+       "brand",
+       "product_line",
+       "volume_ml"
+      ],
+      "different_attributes": [],
+      "unknown_attributes": [],
+      "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+      "decided_by": "rules"
+     },
+     "rating": 4.5,
+     "sold_count": 310,
+     "in_stock": true,
+     "retrieved_at": "2026-01-13T08:00:00.123456Z",
+     "over_budget": false
+    }
+   ],
+   "best_offer_id": null,
+   "lowest_final_price": null,
+   "lowest_price_confidence": null,
+   "offer_count": 2
+  }
+ ],
+ "similar_groups": [],
+ "generated_at": "2026-01-15 10:02:00",
+ "future_top_level": true
+}

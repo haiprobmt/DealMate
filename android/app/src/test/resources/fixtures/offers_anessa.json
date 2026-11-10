@@ -1,0 +1,307 @@
+{
+ "product_id": 1,
+ "variant_id": 11,
+ "title": "Kem chống nắng Anessa Perfect UV Sunscreen Skincare Milk SPF50+ PA++++ 60ml",
+ "image_url": null,
+ "attributes": {
+  "brand": "Anessa",
+  "category": "sunscreen",
+  "product_line": "perfect uv sunscreen skincare milk",
+  "model": null,
+  "sku": null,
+  "gtin": null,
+  "volume_ml": 60.0,
+  "weight_g": null,
+  "count": null,
+  "pack_quantity": null,
+  "size": null,
+  "storage_gb": null,
+  "color": null,
+  "condition": null,
+  "origin": null,
+  "traits": {}
+ },
+ "demo_mode": true,
+ "offers": [
+  {
+   "id": 101,
+   "marketplace": "shopee",
+   "marketplace_name": "Shopee",
+   "is_mock": true,
+   "title": "[DEMO] Kem chống nắng Anessa Perfect UV Sunscreen Skincare Milk SPF50+ PA++++ 60ml",
+   "url": "https://shopee.demo.invalid/product/101",
+   "image_url": null,
+   "seller": {
+    "name": "Anessa Official Store",
+    "rating": 4.9,
+    "is_official_store": true,
+    "location": "TP. Hồ Chí Minh"
+   },
+   "price": {
+    "currency": "VND",
+    "quantity": 1,
+    "listed_price": 359000,
+    "subtotal": 359000,
+    "voucher_discount": 50000,
+    "applied_vouchers": [
+     {
+      "voucher": {
+       "code": "ANESSA30",
+       "source": "store",
+       "kind": "fixed",
+       "value": 30000,
+       "max_discount": null,
+       "min_spend": 300000,
+       "verified": true,
+       "requires": null,
+       "description": null
+      },
+      "discount": 30000,
+      "estimated": false
+     },
+     {
+      "voucher": {
+       "code": "SPP20K",
+       "source": "platform",
+       "kind": "fixed",
+       "value": 20000,
+       "max_discount": null,
+       "min_spend": 250000,
+       "verified": true,
+       "requires": null,
+       "description": null
+      },
+      "discount": 20000,
+      "estimated": false
+     }
+    ],
+    "skipped_vouchers": [
+     {
+      "voucher": {
+       "code": "NEWUSER50",
+       "source": "platform",
+       "kind": "fixed",
+       "value": 50000,
+       "max_discount": null,
+       "min_spend": 0,
+       "verified": false,
+       "requires": "new_user",
+       "description": "Giảm 50k cho khách mới"
+      },
+      "reason": "Chỉ áp dụng cho khách hàng mới nên không được tính."
+     }
+    ],
+    "shipping_fee": 6000,
+    "shipping_status": "verified",
+    "mandatory_fees": 0,
+    "final_price": 315000,
+    "known_subtotal": 315000,
+    "confidence": "verified",
+    "notes": [
+     "Phí vận chuyển do sàn cung cấp cho đơn hàng này."
+    ]
+   },
+   "original_price": 520000,
+   "match": {
+    "match_type": "exact",
+    "confidence": 0.96,
+    "matched_attributes": [
+     "brand",
+     "product_line",
+     "volume_ml"
+    ],
+    "different_attributes": [],
+    "unknown_attributes": [],
+    "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+    "decided_by": "rules"
+   },
+   "rating": 4.9,
+   "rating_count": 12840,
+   "sold_count": 35200,
+   "in_stock": true,
+   "retrieved_at": "2026-01-15T09:55:00Z",
+   "is_stale": false,
+   "over_budget": false
+  },
+  {
+   "id": 102,
+   "marketplace": "lazada",
+   "marketplace_name": "Lazada",
+   "is_mock": true,
+   "title": "[DEMO] Anessa Perfect UV Sunscreen Skincare Milk 60ml - Sữa chống nắng dưỡng da bảo vệ hoàn hảo",
+   "url": "https://lazada.demo.invalid/products/102.html",
+   "image_url": null,
+   "seller": {
+    "name": "Beauty Box VN",
+    "rating": 4.7,
+    "is_official_store": false,
+    "location": "Hà Nội"
+   },
+   "price": {
+    "currency": "VND",
+    "quantity": 1,
+    "listed_price": 345000,
+    "subtotal": 345000,
+    "voucher_discount": 35000,
+    "applied_vouchers": [
+     {
+      "voucher": {
+       "code": null,
+       "source": "store",
+       "kind": "percent",
+       "value": 10,
+       "max_discount": 35000,
+       "min_spend": 0,
+       "verified": false,
+       "requires": null,
+       "description": "Giảm 10% tối đa 35k"
+      },
+      "discount": 34500,
+      "estimated": true
+     }
+    ],
+    "skipped_vouchers": [],
+    "shipping_fee": 12000,
+    "shipping_status": "estimated",
+    "mandatory_fees": 0,
+    "final_price": 322000,
+    "known_subtotal": 322000,
+    "confidence": "estimated",
+    "notes": [
+     "Voucher của shop chưa được xác minh áp dụng cho mọi khách.",
+     "Phí vận chuyển là mức ước tính."
+    ]
+   },
+   "original_price": null,
+   "match": {
+    "match_type": "exact",
+    "confidence": 0.96,
+    "matched_attributes": [
+     "brand",
+     "product_line",
+     "volume_ml"
+    ],
+    "different_attributes": [],
+    "unknown_attributes": [],
+    "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+    "decided_by": "rules"
+   },
+   "rating": 4.7,
+   "rating_count": 3120,
+   "sold_count": 8400,
+   "in_stock": true,
+   "retrieved_at": "2026-01-15T09:40:00+00:00",
+   "is_stale": false,
+   "over_budget": false
+  },
+  {
+   "id": 103,
+   "marketplace": "shopee",
+   "marketplace_name": "Shopee",
+   "is_mock": true,
+   "title": "[DEMO] Sữa chống nắng Anessa Perfect UV Skincare Milk 60ml chính hãng",
+   "url": "https://shopee.demo.invalid/product/103",
+   "image_url": null,
+   "seller": {
+    "name": "Mỹ phẩm Hana",
+    "rating": null,
+    "is_official_store": null,
+    "location": null
+   },
+   "price": {
+    "currency": "VND",
+    "quantity": 1,
+    "listed_price": 299000,
+    "subtotal": 299000,
+    "voucher_discount": 0,
+    "applied_vouchers": [],
+    "skipped_vouchers": [],
+    "shipping_fee": null,
+    "shipping_status": "unknown",
+    "mandatory_fees": 0,
+    "final_price": null,
+    "known_subtotal": 299000,
+    "confidence": "incomplete",
+    "notes": [
+     "Sàn không trả về phí vận chuyển cho tin đăng này."
+    ]
+   },
+   "original_price": null,
+   "match": {
+    "match_type": "exact",
+    "confidence": 0.96,
+    "matched_attributes": [
+     "brand",
+     "product_line",
+     "volume_ml"
+    ],
+    "different_attributes": [],
+    "unknown_attributes": [],
+    "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+    "decided_by": "rules"
+   },
+   "rating": 4.5,
+   "rating_count": 96,
+   "sold_count": 310,
+   "in_stock": true,
+   "retrieved_at": "2026-01-13T08:00:00.123456Z",
+   "is_stale": true,
+   "over_budget": false
+  }
+ ],
+ "best_offer_id": 101,
+ "price_history": [
+  {
+   "recorded_at": "2026-01-09T03:00:00Z",
+   "lowest_final_price": 339000,
+   "confidence": "verified",
+   "marketplace": "shopee",
+   "is_mock": true
+  },
+  {
+   "recorded_at": "2026-01-10T03:00:00Z",
+   "lowest_final_price": 335000,
+   "confidence": "verified",
+   "marketplace": "shopee",
+   "is_mock": true
+  },
+  {
+   "recorded_at": "2026-01-11T03:00:00Z",
+   "lowest_final_price": 342000,
+   "confidence": "estimated",
+   "marketplace": "lazada",
+   "is_mock": true
+  },
+  {
+   "recorded_at": "2026-01-12T03:00:00Z",
+   "lowest_final_price": null,
+   "confidence": null,
+   "marketplace": null,
+   "is_mock": true
+  },
+  {
+   "recorded_at": "2026-01-13T03:00:00Z",
+   "lowest_final_price": 328000,
+   "confidence": "verified",
+   "marketplace": "shopee",
+   "is_mock": true
+  },
+  {
+   "recorded_at": "2026-01-14T03:00:00Z",
+   "lowest_final_price": 322000,
+   "confidence": "estimated",
+   "marketplace": "lazada",
+   "is_mock": true
+  },
+  {
+   "recorded_at": "2026-01-15T03:00:00Z",
+   "lowest_final_price": 315000,
+   "confidence": "verified",
+   "marketplace": "shopee",
+   "is_mock": true
+  }
+ ],
+ "in_wishlist": false,
+ "wishlist_id": null,
+ "target_price": null
+}

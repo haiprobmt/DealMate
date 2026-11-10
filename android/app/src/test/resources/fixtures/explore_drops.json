@@ -1,0 +1,46 @@
+{
+ "demo_mode": true,
+ "available": true,
+ "reason": null,
+ "price_drops": [
+  {
+   "variant_id": 11,
+   "product_id": 1,
+   "title": "Kem chống nắng Anessa Perfect UV Sunscreen Skincare Milk SPF50+ PA++++ 60ml",
+   "image_url": null,
+   "category": "sunscreen",
+   "previous_lowest_price": 328000,
+   "current_lowest_price": 315000,
+   "marketplace": "shopee",
+   "is_mock": true,
+   "recorded_at": "2026-01-15T03:00:00Z"
+  }
+ ],
+ "recently_seen": [
+  {
+   "variant_id": 12,
+   "title": "Anessa Perfect UV Sunscreen Skincare Milk 20ml",
+   "attributes": {
+    "brand": "Anessa",
+    "category": "sunscreen",
+    "product_line": "perfect uv sunscreen skincare milk",
+    "model": null,
+    "sku": null,
+    "gtin": null,
+    "volume_ml": 20.0,
+    "weight_g": null,
+    "count": null,
+    "pack_quantity": null,
+    "size": null,
+    "storage_gb": null,
+    "color": null,
+    "condition": null,
+    "origin": null,
+    "traits": {}
+   },
+   "lowest_final_price": 139000,
+   "lowest_price_confidence": "verified",
+   "offer_count": 1
+  }
+ ]
+}

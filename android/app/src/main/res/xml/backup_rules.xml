@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 11 and lower. The settings DataStore holds the (encrypted) access token: never backed up. -->
+<full-backup-content>
+    <exclude domain="file" path="datastore/" />
+    <exclude domain="database" path="." />
+</full-backup-content>

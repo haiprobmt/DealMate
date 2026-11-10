@@ -1,0 +1,551 @@
+{
+ "search_id": 501,
+ "search_type": "text",
+ "query": {
+  "raw": "Tìm kem chống nắng Anessa 60ml giá rẻ nhất",
+  "interpreter": "rules",
+  "spec": {
+   "brand": "Anessa",
+   "product_name": "kem chống nắng",
+   "model": null,
+   "category": "sunscreen",
+   "variant": null,
+   "volume": "60ml",
+   "weight": null,
+   "size": null,
+   "quantity": null,
+   "count": null,
+   "storage": null,
+   "color": null,
+   "max_price": 400000,
+   "min_price": null,
+   "currency": "VND",
+   "constraints": [
+    "giá rẻ nhất"
+   ],
+   "uncertain_fields": [],
+   "search_keywords": "kem chống nắng anessa 60ml"
+  },
+  "notes": []
+ },
+ "demo_mode": true,
+ "partial": true,
+ "sources": [
+  {
+   "marketplace": "shopee",
+   "marketplace_name": "Shopee",
+   "status": "ok",
+   "is_mock": true,
+   "offers_found": 3,
+   "elapsed_ms": 412,
+   "message": null
+  },
+  {
+   "marketplace": "lazada",
+   "marketplace_name": "Lazada",
+   "status": "ok",
+   "is_mock": true,
+   "offers_found": 2,
+   "elapsed_ms": 530,
+   "message": null
+  },
+  {
+   "marketplace": "tiktok_shop",
+   "marketplace_name": "TikTok Shop",
+   "status": "timeout",
+   "is_mock": true,
+   "offers_found": 0,
+   "elapsed_ms": 8000,
+   "message": "TikTok Shop không phản hồi trong 8 giây."
+  }
+ ],
+ "best": {
+  "variant_id": 11,
+  "offer_id": 101,
+  "final_price": 315000,
+  "confidence": "verified",
+  "marketplace": "shopee",
+  "marketplace_name": "Shopee",
+  "explanation": "Giá cuối 315.000đ đã gồm voucher 50.000đ và phí vận chuyển 6.000đ, thấp hơn ưu đãi kế tiếp 7.000đ.",
+  "caveat": "Có tin đăng giá niêm yết 299.000đ trên Shopee nhưng chưa rõ phí vận chuyển nên không được tính là rẻ nhất."
+ },
+ "groups": [
+  {
+   "product_id": 1,
+   "variant_id": 11,
+   "title": "Kem chống nắng Anessa Perfect UV Sunscreen Skincare Milk SPF50+ PA++++ 60ml",
+   "image_url": null,
+   "attributes": {
+    "brand": "Anessa",
+    "category": "sunscreen",
+    "product_line": "perfect uv sunscreen skincare milk",
+    "model": null,
+    "sku": null,
+    "gtin": null,
+    "volume_ml": 60.0,
+    "weight_g": null,
+    "count": null,
+    "pack_quantity": null,
+    "size": null,
+    "storage_gb": null,
+    "color": null,
+    "condition": null,
+    "origin": null,
+    "traits": {}
+   },
+   "match": {
+    "match_type": "exact",
+    "confidence": 0.96,
+    "matched_attributes": [
+     "brand",
+     "product_line",
+     "volume_ml"
+    ],
+    "different_attributes": [],
+    "unknown_attributes": [],
+    "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+    "decided_by": "rules"
+   },
+   "offers": [
+    {
+     "id": 101,
+     "marketplace": "shopee",
+     "marketplace_name": "Shopee",
+     "is_mock": true,
+     "title": "[DEMO] Kem chống nắng Anessa Perfect UV Sunscreen Skincare Milk SPF50+ PA++++ 60ml",
+     "url": "https://shopee.demo.invalid/product/101",
+     "image_url": null,
+     "seller": {
+      "name": "Anessa Official Store",
+      "rating": 4.9,
+      "is_official_store": true,
+      "location": "TP. Hồ Chí Minh"
+     },
+     "price": {
+      "currency": "VND",
+      "quantity": 1,
+      "listed_price": 359000,
+      "subtotal": 359000,
+      "voucher_discount": 50000,
+      "applied_vouchers": [
+       {
+        "voucher": {
+         "code": "ANESSA30",
+         "source": "store",
+         "kind": "fixed",
+         "value": 30000,
+         "max_discount": null,
+         "min_spend": 300000,
+         "verified": true,
+         "requires": null,
+         "description": null
+        },
+        "discount": 30000,
+        "estimated": false
+       },
+       {
+        "voucher": {
+         "code": "SPP20K",
+         "source": "platform",
+         "kind": "fixed",
+         "value": 20000,
+         "max_discount": null,
+         "min_spend": 250000,
+         "verified": true,
+         "requires": null,
+         "description": null
+        },
+        "discount": 20000,
+        "estimated": false
+       }
+      ],
+      "skipped_vouchers": [
+       {
+        "voucher": {
+         "code": "NEWUSER50",
+         "source": "platform",
+         "kind": "fixed",
+         "value": 50000,
+         "max_discount": null,
+         "min_spend": 0,
+         "verified": false,
+         "requires": "new_user",
+         "description": "Giảm 50k cho khách mới"
+        },
+        "reason": "Chỉ áp dụng cho khách hàng mới nên không được tính."
+       }
+      ],
+      "shipping_fee": 6000,
+      "shipping_status": "verified",
+      "mandatory_fees": 0,
+      "final_price": 315000,
+      "known_subtotal": 315000,
+      "confidence": "verified",
+      "notes": [
+       "Phí vận chuyển do sàn cung cấp cho đơn hàng này."
+      ]
+     },
+     "original_price": 520000,
+     "match": {
+      "match_type": "exact",
+      "confidence": 0.96,
+      "matched_attributes": [
+       "brand",
+       "product_line",
+       "volume_ml"
+      ],
+      "different_attributes": [],
+      "unknown_attributes": [],
+      "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+      "decided_by": "rules"
+     },
+     "rating": 4.9,
+     "rating_count": 12840,
+     "sold_count": 35200,
+     "in_stock": true,
+     "retrieved_at": "2026-01-15T09:55:00Z",
+     "is_stale": false,
+     "over_budget": false
+    },
+    {
+     "id": 102,
+     "marketplace": "lazada",
+     "marketplace_name": "Lazada",
+     "is_mock": true,
+     "title": "[DEMO] Anessa Perfect UV Sunscreen Skincare Milk 60ml - Sữa chống nắng dưỡng da bảo vệ hoàn hảo",
+     "url": "https://lazada.demo.invalid/products/102.html",
+     "image_url": null,
+     "seller": {
+      "name": "Beauty Box VN",
+      "rating": 4.7,
+      "is_official_store": false,
+      "location": "Hà Nội"
+     },
+     "price": {
+      "currency": "VND",
+      "quantity": 1,
+      "listed_price": 345000,
+      "subtotal": 345000,
+      "voucher_discount": 35000,
+      "applied_vouchers": [
+       {
+        "voucher": {
+         "code": null,
+         "source": "store",
+         "kind": "percent",
+         "value": 10,
+         "max_discount": 35000,
+         "min_spend": 0,
+         "verified": false,
+         "requires": null,
+         "description": "Giảm 10% tối đa 35k"
+        },
+        "discount": 34500,
+        "estimated": true
+       }
+      ],
+      "skipped_vouchers": [],
+      "shipping_fee": 12000,
+      "shipping_status": "estimated",
+      "mandatory_fees": 0,
+      "final_price": 322000,
+      "known_subtotal": 322000,
+      "confidence": "estimated",
+      "notes": [
+       "Voucher của shop chưa được xác minh áp dụng cho mọi khách.",
+       "Phí vận chuyển là mức ước tính."
+      ]
+     },
+     "original_price": null,
+     "match": {
+      "match_type": "exact",
+      "confidence": 0.96,
+      "matched_attributes": [
+       "brand",
+       "product_line",
+       "volume_ml"
+      ],
+      "different_attributes": [],
+      "unknown_attributes": [],
+      "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+      "decided_by": "rules"
+     },
+     "rating": 4.7,
+     "rating_count": 3120,
+     "sold_count": 8400,
+     "in_stock": true,
+     "retrieved_at": "2026-01-15T09:40:00+00:00",
+     "is_stale": false,
+     "over_budget": false
+    },
+    {
+     "id": 103,
+     "marketplace": "shopee",
+     "marketplace_name": "Shopee",
+     "is_mock": true,
+     "title": "[DEMO] Sữa chống nắng Anessa Perfect UV Skincare Milk 60ml chính hãng",
+     "url": "https://shopee.demo.invalid/product/103",
+     "image_url": null,
+     "seller": {
+      "name": "Mỹ phẩm Hana",
+      "rating": null,
+      "is_official_store": null,
+      "location": null
+     },
+     "price": {
+      "currency": "VND",
+      "quantity": 1,
+      "listed_price": 299000,
+      "subtotal": 299000,
+      "voucher_discount": 0,
+      "applied_vouchers": [],
+      "skipped_vouchers": [],
+      "shipping_fee": null,
+      "shipping_status": "unknown",
+      "mandatory_fees": 0,
+      "final_price": null,
+      "known_subtotal": 299000,
+      "confidence": "incomplete",
+      "notes": [
+       "Sàn không trả về phí vận chuyển cho tin đăng này."
+      ]
+     },
+     "original_price": null,
+     "match": {
+      "match_type": "exact",
+      "confidence": 0.96,
+      "matched_attributes": [
+       "brand",
+       "product_line",
+       "volume_ml"
+      ],
+      "different_attributes": [],
+      "unknown_attributes": [],
+      "reason": "Khớp thương hiệu, dòng sản phẩm và dung tích 60ml.",
+      "decided_by": "rules"
+     },
+     "rating": 4.5,
+     "rating_count": 96,
+     "sold_count": 310,
+     "in_stock": true,
+     "retrieved_at": "2026-01-13T08:00:00.123456Z",
+     "is_stale": true,
+     "over_budget": false
+    }
+   ],
+   "best_offer_id": 101,
+   "lowest_final_price": 315000,
+   "lowest_price_confidence": "verified",
+   "offer_count": 3,
+   "in_wishlist": false
+  },
+  {
+   "product_id": 2,
+   "variant_id": 21,
+   "title": "Kem chống nắng Anessa 60ml (không ghi rõ phiên bản)",
+   "image_url": null,
+   "attributes": {
+    "brand": "Anessa",
+    "category": "sunscreen",
+    "product_line": null,
+    "model": null,
+    "sku": null,
+    "gtin": null,
+    "volume_ml": 60.0,
+    "weight_g": null,
+    "count": null,
+    "pack_quantity": null,
+    "size": null,
+    "storage_gb": null,
+    "color": null,
+    "condition": null,
+    "origin": null,
+    "traits": {}
+   },
+   "match": {
+    "match_type": "likely",
+    "confidence": 0.71,
+    "matched_attributes": [
+     "brand",
+     "volume_ml"
+    ],
+    "different_attributes": [],
+    "unknown_attributes": [
+     "product_line"
+    ],
+    "reason": "Khớp thương hiệu và dung tích nhưng tin đăng không ghi rõ phiên bản Skincare Milk.",
+    "decided_by": "rules"
+   },
+   "offers": [
+    {
+     "id": 104,
+     "marketplace": "lazada",
+     "marketplace_name": "Lazada",
+     "is_mock": true,
+     "title": "[DEMO] Kem chống nắng Anessa 60ml vàng",
+     "url": "https://lazada.demo.invalid/products/104.html",
+     "image_url": null,
+     "seller": {
+      "name": "Shop Nhật Nội Địa",
+      "rating": 4.6,
+      "is_official_store": false,
+      "location": "Đà Nẵng"
+     },
+     "price": {
+      "currency": "VND",
+      "quantity": 1,
+      "listed_price": 319000,
+      "subtotal": 319000,
+      "voucher_discount": 0,
+      "applied_vouchers": [],
+      "skipped_vouchers": [],
+      "shipping_fee": 10000,
+      "shipping_status": "estimated",
+      "mandatory_fees": 0,
+      "final_price": 329000,
+      "known_subtotal": 329000,
+      "confidence": "estimated",
+      "notes": [
+       "Phí vận chuyển là mức ước tính."
+      ]
+     },
+     "original_price": null,
+     "match": {
+      "match_type": "likely",
+      "confidence": 0.71,
+      "matched_attributes": [
+       "brand",
+       "volume_ml"
+      ],
+      "different_attributes": [],
+      "unknown_attributes": [
+       "product_line"
+      ],
+      "reason": "Khớp thương hiệu và dung tích nhưng tin đăng không ghi rõ phiên bản Skincare Milk.",
+      "decided_by": "rules"
+     },
+     "rating": 4.6,
+     "rating_count": 540,
+     "sold_count": 2100,
+     "in_stock": true,
+     "retrieved_at": "2026-01-15T09:50:00Z",
+     "is_stale": false,
+     "over_budget": false
+    }
+   ],
+   "best_offer_id": 104,
+   "lowest_final_price": 329000,
+   "lowest_price_confidence": "estimated",
+   "offer_count": 1,
+   "in_wishlist": false
+  }
+ ],
+ "similar_groups": [
+  {
+   "product_id": 1,
+   "variant_id": 12,
+   "title": "Anessa Perfect UV Sunscreen Skincare Milk 20ml",
+   "image_url": null,
+   "attributes": {
+    "brand": "Anessa",
+    "category": "sunscreen",
+    "product_line": "perfect uv sunscreen skincare milk",
+    "model": null,
+    "sku": null,
+    "gtin": null,
+    "volume_ml": 20.0,
+    "weight_g": null,
+    "count": null,
+    "pack_quantity": null,
+    "size": null,
+    "storage_gb": null,
+    "color": null,
+    "condition": null,
+    "origin": null,
+    "traits": {}
+   },
+   "match": {
+    "match_type": "similar",
+    "confidence": 0.55,
+    "matched_attributes": [
+     "brand",
+     "product_line"
+    ],
+    "different_attributes": [
+     "volume_ml"
+    ],
+    "unknown_attributes": [],
+    "reason": "Cùng dòng sản phẩm nhưng dung tích 20ml, khác với 60ml bạn yêu cầu.",
+    "decided_by": "rules"
+   },
+   "offers": [
+    {
+     "id": 105,
+     "marketplace": "shopee",
+     "marketplace_name": "Shopee",
+     "is_mock": true,
+     "title": "[DEMO] Anessa Perfect UV Sunscreen Skincare Milk 20ml (mini)",
+     "url": "https://shopee.demo.invalid/product/105",
+     "image_url": null,
+     "seller": {
+      "name": "Anessa Official Store",
+      "rating": 4.9,
+      "is_official_store": true,
+      "location": "TP. Hồ Chí Minh"
+     },
+     "price": {
+      "currency": "VND",
+      "quantity": 1,
+      "listed_price": 139000,
+      "subtotal": 139000,
+      "voucher_discount": 0,
+      "applied_vouchers": [],
+      "skipped_vouchers": [],
+      "shipping_fee": 0,
+      "shipping_status": "verified",
+      "mandatory_fees": 0,
+      "final_price": 139000,
+      "known_subtotal": 139000,
+      "confidence": "verified",
+      "notes": []
+     },
+     "original_price": null,
+     "match": {
+      "match_type": "similar",
+      "confidence": 0.55,
+      "matched_attributes": [
+       "brand",
+       "product_line"
+      ],
+      "different_attributes": [
+       "volume_ml"
+      ],
+      "unknown_attributes": [],
+      "reason": "Cùng dòng sản phẩm nhưng dung tích 20ml, khác với 60ml bạn yêu cầu.",
+      "decided_by": "rules"
+     },
+     "rating": 4.8,
+     "rating_count": 2210,
+     "sold_count": 9100,
+     "in_stock": true,
+     "retrieved_at": "2026-01-15T09:55:00Z",
+     "is_stale": false,
+     "over_budget": false
+    }
+   ],
+   "best_offer_id": 105,
+   "lowest_final_price": 139000,
+   "lowest_price_confidence": "verified",
+   "offer_count": 1,
+   "in_wishlist": false
+  }
+ ],
+ "excluded_count": 4,
+ "over_budget_count": 0,
+ "clarification": {
+  "needed": false,
+  "message": null,
+  "suggestions": []
+ },
+ "generated_at": "2026-01-15T10:00:00Z"
+}

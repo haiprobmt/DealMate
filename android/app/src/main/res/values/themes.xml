@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background">#FAF7F3</color>
+    <color name="brand_orange">#F26B1D</color>
+    <style name="Theme.DealMate" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="colorPrimary">@color/brand_orange</item>
+        <item name="colorAccent">@color/brand_orange</item>
+    </style>
+</resources>

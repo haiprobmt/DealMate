@@ -38,8 +38,10 @@ class FcmSender:
     async def send(self, device_token: str, title: str, body: str, data: dict[str, str]) -> str:
         """Returns 'sent', 'invalid_token' (device should be forgotten) or 'failed'."""
         token = await asyncio.to_thread(self._access_token)
-        message = {"message": {"token": device_token, "notification": {"title": title, "body": body},
-                               "data": data, "android": {"priority": "high"}}}
+        # Data-only message: the Android app builds the notification itself (deep link to the
+        # product, DEMO labelling) whether it is in the foreground or the background.
+        message = {"message": {"token": device_token, "data": {"title": title, "body": body, **data},
+                               "android": {"priority": "high"}}}
         async with httpx.AsyncClient(timeout=10, transport=self._transport) as client:
             response = await client.post(
                 f"https://fcm.googleapis.com/v1/projects/{self._project}/messages:send",

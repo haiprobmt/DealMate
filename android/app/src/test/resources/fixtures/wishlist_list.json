@@ -1,0 +1,55 @@
+{
+ "items": [
+  {
+   "id": 31,
+   "product_id": 1,
+   "variant_id": 11,
+   "title": "Kem chống nắng Anessa Perfect UV Sunscreen Skincare Milk SPF50+ PA++++ 60ml",
+   "image_url": null,
+   "current_lowest_price": 315000,
+   "current_price_confidence": "verified",
+   "current_marketplace": "shopee",
+   "current_offer_url": "https://shopee.demo.invalid/product/101",
+   "previous_lowest_price": 328000,
+   "last_checked_at": "2026-01-15T09:00:00Z",
+   "target_price": 300000,
+   "alert_id": 41,
+   "is_mock": true,
+   "created_at": "2026-01-10T02:00:00Z"
+  },
+  {
+   "id": 32,
+   "product_id": 5,
+   "variant_id": 51,
+   "title": "Máy sấy tóc Dyson Supersonic HD15 – Xanh mòng két/Hồng, bảo hành 24 tháng",
+   "image_url": null,
+   "current_lowest_price": 7990000,
+   "current_price_confidence": "estimated",
+   "current_marketplace": "lazada",
+   "current_offer_url": "https://lazada.demo.invalid/products/777.html",
+   "previous_lowest_price": 7790000,
+   "last_checked_at": "2026-01-15T08:00:00Z",
+   "target_price": null,
+   "alert_id": null,
+   "is_mock": true,
+   "created_at": "2026-01-08T02:00:00Z"
+  },
+  {
+   "id": 33,
+   "product_id": 7,
+   "variant_id": 71,
+   "title": "Tã quần Merries size L 44 miếng",
+   "image_url": null,
+   "current_lowest_price": null,
+   "current_price_confidence": null,
+   "current_marketplace": null,
+   "current_offer_url": null,
+   "previous_lowest_price": null,
+   "last_checked_at": null,
+   "target_price": 350000,
+   "alert_id": 42,
+   "is_mock": false,
+   "created_at": "2026-01-14T02:00:00Z"
+  }
+ ]
+}
